@@ -1,0 +1,241 @@
+.carousel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-item {
+    height: 400px;
+    position: relative;
+}
+
+/* Slide Backgrounds */
+.slide-tokopedia {
+    background: linear-gradient(135deg, #42c5c4 0%, #26a0da 100%);
+}
+
+.slide-hemat {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.slide-cashback {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.carousel-content {
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    color: white;
+    max-width: 500px;
+}
+
+.carousel-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+}
+
+.carousel-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+    font-weight: 500;
+}
+
+.btn-promo {
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: white;
+    padding: 12px 35px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    text-decoration: none;
+}
+
+.btn-promo:hover {
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Decorative Elements */
+.decoration-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.floating-shape {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: float 8s ease-in-out infinite;
+}
+
+.shape-1 {
+    width: 120px;
+    height: 120px;
+    right: 100px;
+    top: 50px;
+    animation-delay: 0s;
+}
+
+.shape-2 {
+    width: 80px;
+    height: 80px;
+    right: 200px;
+    top: 150px;
+    animation-delay: -2s;
+}
+
+.shape-3 {
+    width: 60px;
+    height: 60px;
+    right: 50px;
+    top: 250px;
+    animation-delay: -4s;
+}
+
+.shape-4 {
+    width: 100px;
+    height: 100px;
+    right: 300px;
+    top: 80px;
+    animation-delay: -6s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.1; }
+    50% { transform: translateY(-20px) rotate(180deg); opacity: 0.2; }
+}
+
+/* Mascot Style Elements */
+.mascot-container {
+    position: absolute;
+    right: 80px;
+    bottom: -20px;
+    width: 200px;
+    height: 250px;
+}
+
+.mascot-circle {
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+}
+
+.mascot-icon {
+    position: absolute;
+    right: 20px;
+    bottom: 80px;
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.8);
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Custom carousel indicators */
+.carousel-indicators button{
+    bottom: 8px;
+}
+
+.carousel-indicators button {
+    width: 12px !important;
+    height: 8px !important;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 3px;
+    transition: all 0.3s ease;
+}
+
+/* Custom carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev {
+    left: 20px;
+}
+
+.carousel-control-next {
+    right: 20px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.carousel-item img {
+    border-radius: 0 0 20px 20px; 
+    object-fit: cover; 
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-content {
+        left: 30px;
+        max-width: 300px;
+    }
+
+    .carousel-title {
+        font-size: 1.8rem;
+    }
+
+    .carousel-subtitle {
+        font-size: 1rem;
+    }
+
+    .mascot-container {
+        right: 20px;
+        width: 120px;
+    }
+
+    .mascot-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .mascot-icon {
+        font-size: 2.5rem;
+    }
+}
