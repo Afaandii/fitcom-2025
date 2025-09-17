@@ -9,6 +9,7 @@
   <!-- Font awesome cdn -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/logo-agrikalcer.png" type="image/png">
 
   <title>Agrikalcer</title>
 </head>
@@ -60,7 +61,7 @@
     <!-- navigasi bar end -->
 
     <!-- carousel -->
-    <div class="container-fluid">
+    <div class="container-fluid p-2 mt-3">
       <div class="carousel-container">
         <div id="promoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
           <!-- Indicators -->
@@ -108,6 +109,96 @@
       </div>
     </div>
     <!-- carousel end -->
+
+    <!-- kategori card -->
+    <div class="container-fluid bg-light rounded-2 mt-3">
+      <div class="card-container">
+        <div class="card-scroll justify-content-lg-center gap-lg-4">
+          <div class="card-kategori">
+            <a href="#">
+              <div class="container-icon">
+                <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+              </div>
+              <h6 class="mt-2">Dummy</h6>
+            </a>
+          </div>
+          <div class="card-kategori">
+            <a href="#">
+              <div class="container-icon">
+                <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+              </div>
+              <h6 class="mt-2">Dummy</h6>
+            </a>
+          </div>
+          <div class="card-kategori">
+            <a href="#">
+              <div class="container-icon">
+                <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+              </div>
+              <h6 class="mt-2">Dummy</h6>
+            </a>
+          </div>
+          <div class="card-kategori">
+            <a href="#">
+              <div class="container-icon">
+                <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+              </div>
+              <h6 class="mt-2">Dummy</h6>
+            </a>
+          </div>
+          <div class="card-kategori">
+            <a href="#">
+              <div class="container-icon">
+                <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+              </div>
+              <h6 class="mt-2">Dummy</h6>
+            </a>
+          </div>
+          <div class="card-kategori">
+            <a href="#">
+              <div class="container-icon">
+                <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+              </div>
+              <h6 class="mt-2">Dummy</h6>
+            </a>
+          </div>
+          <div class="card-kategori">
+            <a href="#">
+              <div class="container-icon">
+                <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+              </div>
+              <h6 class="mt-2">Dummy</h6>
+            </a>
+          </div>
+          <div class="card-kategori">
+            <a href="#">
+              <div class="container-icon">
+                <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+              </div>
+              <h6 class="mt-2">Dummy</h6>
+            </a>
+          </div>
+          <div class="card-kategori">
+            <a href="#">
+              <div class="container-icon">
+                <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+              </div>
+              <h6 class="mt-2">Dummy</h6>
+            </a>
+          </div>
+          <div class="card-kategori">
+            <a href="#">
+              <div class="container-icon">
+                <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+              </div>
+              <h6 class="mt-2">Dummy</h6>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- kategori card end -->
+
   </section>
 
   <!-- bs js -->
