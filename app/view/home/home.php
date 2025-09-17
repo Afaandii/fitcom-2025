@@ -204,68 +204,131 @@
       <div class="row justify-content-center g-2 g-lg-3">
 
         <div class="col-6 col-lg-3">
-          <div class="card text-center w-100 shadow-sm border rounded-3">
-            <!-- Gambar -->
-            <div class="p-3">
-              <img
-                src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="poto.png" class="img-fluid rounded-3">
+          <a href="#" class="text-decoration-none">
+            <div class="card text-center w-100 shadow-sm rounded-3">
+              <div class="p-3">
+                <img
+                  src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="poto.png" class="img-fluid rounded-3">
+              </div>
+              <div class="card-body bg-light">
+                <h2 class="h4 fw-bold text-dark">Dummy</h2>
+                <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
+              </div>
             </div>
-
-            <!-- Konten -->
-            <div class="card-body bg-light">
-              <h2 class="h4 fw-bold text-dark">Dummy</h2>
-              <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
-            </div>
-          </div>
+          </a>
         </div>
-        <div class="col-6 col-lg-3">
-          <div class="card text-center w-100 shadow-sm border rounded-3">
-            <!-- Gambar -->
-            <div class="p-3">
-              <img
-                src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="poto.png" class="img-fluid rounded-3">
-            </div>
 
-            <!-- Konten -->
-            <div class="card-body bg-light">
-              <h2 class="h4 fw-bold text-dark">Dummy</h2>
-              <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
+        <div class="col-6 col-lg-3">
+          <a href="#" class="text-decoration-none">
+            <div class="card text-center w-100 shadow-sm border rounded-3">
+              <div class="p-3">
+                <img
+                  src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="poto.png" class="img-fluid rounded-3">
+              </div>
+              <div class="card-body bg-light">
+                <h2 class="h4 fw-bold text-dark">Dummy</h2>
+                <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
-        <div class="col-6 col-lg-3">
-          <div class="card text-center w-100 shadow-sm border rounded-3">
-            <!-- Gambar -->
-            <div class="p-3">
-              <img
-                src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="poto.png" class="img-fluid rounded-3">
-            </div>
 
-            <!-- Konten -->
-            <div class="card-body bg-light">
-              <h2 class="h4 fw-bold text-dark">Dummy</h2>
-              <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
+        <div class="col-6 col-lg-3">
+          <a href="#" class="text-decoration-none">
+            <div class="card text-center w-100 shadow-sm border rounded-3">
+              <div class="p-3">
+                <img
+                  src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="poto.png" class="img-fluid rounded-3">
+              </div>
+              <div class="card-body bg-light">
+                <h2 class="h4 fw-bold text-dark">Dummy</h2>
+                <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
-        <div class="col-6 col-lg-3">
-          <div class="card text-center w-100 shadow-sm border rounded-3">
-            <!-- Gambar -->
-            <div class="p-3">
-              <img
-                src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="poto.png" class="img-fluid rounded-3">
-            </div>
 
-            <!-- Konten -->
-            <div class="card-body bg-light">
-              <h2 class="h4 fw-bold text-dark">Dummy</h2>
-              <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
+        <div class="col-6 col-lg-3">
+          <a href="#" class="text-decoration-none">
+            <div class="card text-center w-100 shadow-sm border rounded-3">
+              <div class="p-3">
+                <img
+                  src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="poto.png" class="img-fluid rounded-3">
+              </div>
+              <div class="card-body bg-light">
+                <h2 class="h4 fw-bold text-dark">Dummy</h2>
+                <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
+              </div>
             </div>
-          </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <a href="#" class="text-decoration-none">
+            <div class="card text-center w-100 shadow-sm border rounded-3">
+              <div class="p-3">
+                <img
+                  src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="poto.png" class="img-fluid rounded-3">
+              </div>
+              <div class="card-body bg-light">
+                <h2 class="h4 fw-bold text-dark">Dummy</h2>
+                <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <a href="#" class="text-decoration-none">
+            <div class="card text-center w-100 shadow-sm border rounded-3">
+              <div class="p-3">
+                <img
+                  src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="poto.png" class="img-fluid rounded-3">
+              </div>
+              <div class="card-body bg-light">
+                <h2 class="h4 fw-bold text-dark">Dummy</h2>
+                <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <a href="#" class="text-decoration-none">
+            <div class="card text-center w-100 shadow-sm border rounded-3">
+              <div class="p-3">
+                <img
+                  src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="poto.png" class="img-fluid rounded-3">
+              </div>
+              <div class="card-body bg-light">
+                <h2 class="h4 fw-bold text-dark">Dummy</h2>
+                <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <a href="#" class="text-decoration-none">
+            <div class="card text-center w-100 shadow-sm border rounded-3">
+              <div class="p-3">
+                <img
+                  src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="poto.png" class="img-fluid rounded-3">
+              </div>
+              <div class="card-body bg-light">
+                <h2 class="h4 fw-bold text-dark">Dummy</h2>
+                <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
+              </div>
+            </div>
+          </a>
         </div>
 
       </div>
