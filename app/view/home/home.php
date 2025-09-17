@@ -15,22 +15,20 @@
 </head>
 
 <body>
-  <!-- navigasi bar -->
+  <!-- navbar bar -->
   <section class="w-100 h-100">
     <nav class="navbar navbar-expand-lg bg-white shadow-sm">
       <div class="container">
-        <!-- Logo -->
         <a class="navbar-brand d-flex align-items-center" href="#">
           <img src="img/logo-agrikalcer.png" alt="Logo" width="100" class="me-2">
         </a>
 
-        <!-- Toggler button (mobile) -->
+        <!-- hamburger -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarEcom"
           aria-controls="navbarEcom" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Navbar content -->
         <div class="collapse navbar-collapse" id="navbarEcom">
           <!-- Search -->
           <form class="flex-grow-1 mx-lg-3 my-3 my-lg-0" role="search">
@@ -42,7 +40,6 @@
             </div>
           </form>
 
-          <!-- Right menu -->
           <div class="d-flex align-items-center">
             <!-- Cart -->
             <a href="#" class="btn btn-outline-secondary me-3 position-relative">
@@ -51,14 +48,14 @@
                 0
               </span>
             </a>
-            <!-- Login & Register -->
+
             <a href="#" class="btn btn-outline-primary me-2">Masuk</a>
             <a href="#" class="btn btn-primary">Daftar</a>
           </div>
         </div>
       </div>
     </nav>
-    <!-- navigasi bar end -->
+    <!-- navbar end -->
 
     <!-- carousel -->
     <div class="container-fluid p-2 mt-3">
