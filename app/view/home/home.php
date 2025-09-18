@@ -332,6 +332,8 @@
     </div>
     <!-- card produk end -->
   </section>
+  <?php require_once __DIR__ . '\..\home\footer.php'; ?>
+
 
   <!-- bs js -->
   <script src="js/bootstrap.bundle.min.js"></script>
