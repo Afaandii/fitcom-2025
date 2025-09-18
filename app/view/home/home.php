@@ -1,343 +1,276 @@
-<!DOCTYPE html>
-<html lang="en">
+<section class="w-100 h-100">
+  <!-- carousel -->
+  <div class="container-fluid p-2 mt-3">
+    <div class="carousel-container">
+      <div id="promoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- bs css -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <!-- Font awesome cdn -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="img/logo-agrikalcer.png" type="image/png">
+        <!-- Carousel Items -->
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <img
+              src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="d-block w-100" alt="Banner Promo 1">
+          </div>
 
-  <title>Agrikalcer</title>
-</head>
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <img
+              src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="d-block w-100" alt="Banner Promo 2">
+          </div>
 
-<body>
-  <!-- navbar bar -->
-  <section class="w-100 h-100">
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
-      <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-          <img src="img/logo-agrikalcer.png" alt="Logo" width="100" class="me-2">
-        </a>
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <img
+              src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="d-block w-100" alt="Banner Promo 3">
+          </div>
+        </div>
 
-        <!-- hamburger -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarEcom"
-          aria-controls="navbarEcom" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
         </button>
-
-        <div class="collapse navbar-collapse" id="navbarEcom">
-          <!-- Search -->
-          <form class="flex-grow-1 mx-lg-3 my-3 my-lg-0" role="search">
-            <div class="input-group">
-              <span class="input-group-text bg-white border-end-0 rounded-start-pill">
-                <i class="fas fa-search text-secondary"></i>
-              </span>
-              <input type="search" class="form-control border-start-0 rounded-end-pill" placeholder="Cari produk...">
-            </div>
-          </form>
-
-          <div class="d-flex align-items-center">
-            <!-- Cart -->
-            <a href="#" class="btn btn-outline-secondary me-3 position-relative">
-              <i class="fas fa-shopping-cart"></i>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                0
-              </span>
-            </a>
-
-            <a href="#" class="btn btn-outline-primary me-2">Masuk</a>
-            <a href="#" class="btn btn-primary">Daftar</a>
-          </div>
-        </div>
+        <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-    </nav>
-    <!-- navbar end -->
+    </div>
+  </div>
+  <!-- carousel end -->
 
-    <!-- carousel -->
-    <div class="container-fluid p-2 mt-3">
-      <div class="carousel-container">
-        <div id="promoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-          <!-- Indicators -->
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="0" class="active"
-              aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#promoCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-
-          <!-- Carousel Items -->
-          <div class="carousel-inner">
-            <!-- Slide 1 -->
-            <div class="carousel-item active">
-              <img
-                src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                class="d-block w-100" alt="Banner Promo 1">
+  <!-- kategori card -->
+  <div class="container-fluid bg-light rounded-2 mt-3">
+    <div class="card-container">
+      <div class="card-scroll justify-content-lg-center gap-lg-4">
+        <div class="card-kategori">
+          <a href="#">
+            <div class="container-icon">
+              <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
             </div>
-
-            <!-- Slide 2 -->
-            <div class="carousel-item">
-              <img
-                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                class="d-block w-100" alt="Banner Promo 2">
+            <h6 class="mt-2">Dummy</h6>
+          </a>
+        </div>
+        <div class="card-kategori">
+          <a href="#">
+            <div class="container-icon">
+              <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
             </div>
-
-            <!-- Slide 3 -->
-            <div class="carousel-item">
-              <img
-                src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                class="d-block w-100" alt="Banner Promo 3">
+            <h6 class="mt-2">Dummy</h6>
+          </a>
+        </div>
+        <div class="card-kategori">
+          <a href="#">
+            <div class="container-icon">
+              <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
             </div>
-          </div>
-
-          <!-- Controls -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+            <h6 class="mt-2">Dummy</h6>
+          </a>
+        </div>
+        <div class="card-kategori">
+          <a href="#">
+            <div class="container-icon">
+              <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+            </div>
+            <h6 class="mt-2">Dummy</h6>
+          </a>
+        </div>
+        <div class="card-kategori">
+          <a href="#">
+            <div class="container-icon">
+              <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+            </div>
+            <h6 class="mt-2">Dummy</h6>
+          </a>
+        </div>
+        <div class="card-kategori">
+          <a href="#">
+            <div class="container-icon">
+              <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+            </div>
+            <h6 class="mt-2">Dummy</h6>
+          </a>
+        </div>
+        <div class="card-kategori">
+          <a href="#">
+            <div class="container-icon">
+              <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+            </div>
+            <h6 class="mt-2">Dummy</h6>
+          </a>
+        </div>
+        <div class="card-kategori">
+          <a href="#">
+            <div class="container-icon">
+              <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+            </div>
+            <h6 class="mt-2">Dummy</h6>
+          </a>
+        </div>
+        <div class="card-kategori">
+          <a href="#">
+            <div class="container-icon">
+              <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+            </div>
+            <h6 class="mt-2">Dummy</h6>
+          </a>
+        </div>
+        <div class="card-kategori">
+          <a href="#">
+            <div class="container-icon">
+              <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+            </div>
+            <h6 class="mt-2">Dummy</h6>
+          </a>
         </div>
       </div>
     </div>
-    <!-- carousel end -->
+  </div>
+  <!-- kategori card end -->
 
-    <!-- kategori card -->
-    <div class="container-fluid bg-light rounded-2 mt-3">
-      <div class="card-container">
-        <div class="card-scroll justify-content-lg-center gap-lg-4">
-          <div class="card-kategori">
-            <a href="#">
-              <div class="container-icon">
-                <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
-              </div>
-              <h6 class="mt-2">Dummy</h6>
-            </a>
+  <!-- card produk -->
+  <div class="container-fluid">
+    <div class="row justify-content-center g-2 g-lg-3">
+
+      <div class="col-6 col-lg-3">
+        <a href="#" class="text-decoration-none">
+          <div class="card text-center w-100 shadow-sm rounded-3">
+            <div class="p-3">
+              <img
+                src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="poto.png" class="img-fluid rounded-3">
+            </div>
+            <div class="card-body bg-light">
+              <h2 class="h4 fw-bold text-dark">Dummy</h2>
+              <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
+            </div>
           </div>
-          <div class="card-kategori">
-            <a href="#">
-              <div class="container-icon">
-                <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
-              </div>
-              <h6 class="mt-2">Dummy</h6>
-            </a>
-          </div>
-          <div class="card-kategori">
-            <a href="#">
-              <div class="container-icon">
-                <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
-              </div>
-              <h6 class="mt-2">Dummy</h6>
-            </a>
-          </div>
-          <div class="card-kategori">
-            <a href="#">
-              <div class="container-icon">
-                <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
-              </div>
-              <h6 class="mt-2">Dummy</h6>
-            </a>
-          </div>
-          <div class="card-kategori">
-            <a href="#">
-              <div class="container-icon">
-                <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
-              </div>
-              <h6 class="mt-2">Dummy</h6>
-            </a>
-          </div>
-          <div class="card-kategori">
-            <a href="#">
-              <div class="container-icon">
-                <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
-              </div>
-              <h6 class="mt-2">Dummy</h6>
-            </a>
-          </div>
-          <div class="card-kategori">
-            <a href="#">
-              <div class="container-icon">
-                <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
-              </div>
-              <h6 class="mt-2">Dummy</h6>
-            </a>
-          </div>
-          <div class="card-kategori">
-            <a href="#">
-              <div class="container-icon">
-                <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
-              </div>
-              <h6 class="mt-2">Dummy</h6>
-            </a>
-          </div>
-          <div class="card-kategori">
-            <a href="#">
-              <div class="container-icon">
-                <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
-              </div>
-              <h6 class="mt-2">Dummy</h6>
-            </a>
-          </div>
-          <div class="card-kategori">
-            <a href="#">
-              <div class="container-icon">
-                <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
-              </div>
-              <h6 class="mt-2">Dummy</h6>
-            </a>
-          </div>
-        </div>
+        </a>
       </div>
-    </div>
-    <!-- kategori card end -->
 
-    <!-- card produk -->
-    <div class="container-fluid">
-      <div class="row justify-content-center g-2 g-lg-3">
-
-        <div class="col-6 col-lg-3">
-          <a href="#" class="text-decoration-none">
-            <div class="card text-center w-100 shadow-sm rounded-3">
-              <div class="p-3">
-                <img
-                  src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="poto.png" class="img-fluid rounded-3">
-              </div>
-              <div class="card-body bg-light">
-                <h2 class="h4 fw-bold text-dark">Dummy</h2>
-                <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
-              </div>
+      <div class="col-6 col-lg-3">
+        <a href="#" class="text-decoration-none">
+          <div class="card text-center w-100 shadow-sm border rounded-3">
+            <div class="p-3">
+              <img
+                src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="poto.png" class="img-fluid rounded-3">
             </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <a href="#" class="text-decoration-none">
-            <div class="card text-center w-100 shadow-sm border rounded-3">
-              <div class="p-3">
-                <img
-                  src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="poto.png" class="img-fluid rounded-3">
-              </div>
-              <div class="card-body bg-light">
-                <h2 class="h4 fw-bold text-dark">Dummy</h2>
-                <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
-              </div>
+            <div class="card-body bg-light">
+              <h2 class="h4 fw-bold text-dark">Dummy</h2>
+              <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
             </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <a href="#" class="text-decoration-none">
-            <div class="card text-center w-100 shadow-sm border rounded-3">
-              <div class="p-3">
-                <img
-                  src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="poto.png" class="img-fluid rounded-3">
-              </div>
-              <div class="card-body bg-light">
-                <h2 class="h4 fw-bold text-dark">Dummy</h2>
-                <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <a href="#" class="text-decoration-none">
-            <div class="card text-center w-100 shadow-sm border rounded-3">
-              <div class="p-3">
-                <img
-                  src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="poto.png" class="img-fluid rounded-3">
-              </div>
-              <div class="card-body bg-light">
-                <h2 class="h4 fw-bold text-dark">Dummy</h2>
-                <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <a href="#" class="text-decoration-none">
-            <div class="card text-center w-100 shadow-sm border rounded-3">
-              <div class="p-3">
-                <img
-                  src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="poto.png" class="img-fluid rounded-3">
-              </div>
-              <div class="card-body bg-light">
-                <h2 class="h4 fw-bold text-dark">Dummy</h2>
-                <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <a href="#" class="text-decoration-none">
-            <div class="card text-center w-100 shadow-sm border rounded-3">
-              <div class="p-3">
-                <img
-                  src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="poto.png" class="img-fluid rounded-3">
-              </div>
-              <div class="card-body bg-light">
-                <h2 class="h4 fw-bold text-dark">Dummy</h2>
-                <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <a href="#" class="text-decoration-none">
-            <div class="card text-center w-100 shadow-sm border rounded-3">
-              <div class="p-3">
-                <img
-                  src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="poto.png" class="img-fluid rounded-3">
-              </div>
-              <div class="card-body bg-light">
-                <h2 class="h4 fw-bold text-dark">Dummy</h2>
-                <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-6 col-lg-3">
-          <a href="#" class="text-decoration-none">
-            <div class="card text-center w-100 shadow-sm border rounded-3">
-              <div class="p-3">
-                <img
-                  src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="poto.png" class="img-fluid rounded-3">
-              </div>
-              <div class="card-body bg-light">
-                <h2 class="h4 fw-bold text-dark">Dummy</h2>
-                <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
+          </div>
+        </a>
       </div>
+
+      <div class="col-6 col-lg-3">
+        <a href="#" class="text-decoration-none">
+          <div class="card text-center w-100 shadow-sm border rounded-3">
+            <div class="p-3">
+              <img
+                src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="poto.png" class="img-fluid rounded-3">
+            </div>
+            <div class="card-body bg-light">
+              <h2 class="h4 fw-bold text-dark">Dummy</h2>
+              <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <a href="#" class="text-decoration-none">
+          <div class="card text-center w-100 shadow-sm border rounded-3">
+            <div class="p-3">
+              <img
+                src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="poto.png" class="img-fluid rounded-3">
+            </div>
+            <div class="card-body bg-light">
+              <h2 class="h4 fw-bold text-dark">Dummy</h2>
+              <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <a href="#" class="text-decoration-none">
+          <div class="card text-center w-100 shadow-sm border rounded-3">
+            <div class="p-3">
+              <img
+                src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="poto.png" class="img-fluid rounded-3">
+            </div>
+            <div class="card-body bg-light">
+              <h2 class="h4 fw-bold text-dark">Dummy</h2>
+              <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <a href="#" class="text-decoration-none">
+          <div class="card text-center w-100 shadow-sm border rounded-3">
+            <div class="p-3">
+              <img
+                src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="poto.png" class="img-fluid rounded-3">
+            </div>
+            <div class="card-body bg-light">
+              <h2 class="h4 fw-bold text-dark">Dummy</h2>
+              <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <a href="#" class="text-decoration-none">
+          <div class="card text-center w-100 shadow-sm border rounded-3">
+            <div class="p-3">
+              <img
+                src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="poto.png" class="img-fluid rounded-3">
+            </div>
+            <div class="card-body bg-light">
+              <h2 class="h4 fw-bold text-dark">Dummy</h2>
+              <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <a href="#" class="text-decoration-none">
+          <div class="card text-center w-100 shadow-sm border rounded-3">
+            <div class="p-3">
+              <img
+                src="https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="poto.png" class="img-fluid rounded-3">
+            </div>
+            <div class="card-body bg-light">
+              <h2 class="h4 fw-bold text-dark">Dummy</h2>
+              <p class="text-primary fs-5 fw-semibold mt-2">Rp 100.000</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
     </div>
-    <!-- card produk end -->
-  </section>
-  <?php require_once __DIR__ . '\..\home\footer.php'; ?>
-
-
-  <!-- bs js -->
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/script.js"></script>
-</body>
-
-</html>
+  </div>
+  <!-- card produk end -->
+</section>
