@@ -312,3 +312,166 @@
 .card p {
     transition: all 0.3s ease-in-out;
 }
+
+
+.zoom-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    cursor: zoom-in;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .zoom-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    display: block;
+  }
+
+  .zoom-lens {
+    position: absolute;
+    border: 2px solid #007bff;
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    backdrop-filter: blur(1px);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+  }
+
+  .zoom-result {
+    position: absolute;
+    right: -330px;
+    top: 0;
+    width: 320px;
+    height: 320px;
+    border: 2px solid #dee2e6;
+    background-size: 800px 800px;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 1000;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(10px);
+  }
+
+  .zoom-result::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, rgba(0, 123, 255, 0.1), rgba(0, 123, 255, 0.05));
+    border-radius: 20px;
+    z-index: -1;
+  }
+
+  /* Alternative zoom styles */
+  .zoom-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .zoom-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .zoom-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+  }
+
+  .close-zoom {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 2001;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+  }
+
+  .zoom-instructions {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+  }
+
+  /* Thumbnail container */
+  .thumbnail-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+  }
+
+  .thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+  }
+
+  .thumbnail:hover,
+  .thumbnail.active {
+    border-color: #007bff;
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  .product-card {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .zoom-type-selector {
+    margin-bottom: 20px;
+  }
+
+  .zoom-type-btn {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  

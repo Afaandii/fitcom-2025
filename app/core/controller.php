@@ -3,6 +3,9 @@ class Controller
 {
   public function view($view, $data = [])
   {
+    if (!empty($data)) {
+      extract($data);
+    }
     include_once "../app/view/" . $view . ".php";
   }
 
