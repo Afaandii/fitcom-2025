@@ -56,7 +56,7 @@
         <div class="card-kategori">
           <a href="#">
             <div class="container-icon">
-              <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+              <img src="img/AmoerFarm Logo.png" alt="logo" class="kategori-img-logo">
             </div>
             <h6 class="mt-2">Dummy</h6>
           </a>
@@ -64,7 +64,7 @@
         <div class="card-kategori">
           <a href="#">
             <div class="container-icon">
-              <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+              <img src="img/AmoerFarm Logo.png" alt="logo" class="kategori-img-logo">
             </div>
             <h6 class="mt-2">Dummy</h6>
           </a>
@@ -72,7 +72,7 @@
         <div class="card-kategori">
           <a href="#">
             <div class="container-icon">
-              <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+              <img src="img/AmoerFarm Logo.png" alt="logo" class="kategori-img-logo">
             </div>
             <h6 class="mt-2">Dummy</h6>
           </a>
@@ -80,7 +80,7 @@
         <div class="card-kategori">
           <a href="#">
             <div class="container-icon">
-              <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+              <img src="img/AmoerFarm Logo.png" alt="logo" class="kategori-img-logo">
             </div>
             <h6 class="mt-2">Dummy</h6>
           </a>
@@ -88,7 +88,7 @@
         <div class="card-kategori">
           <a href="#">
             <div class="container-icon">
-              <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+              <img src="img/AmoerFarm Logo.png" alt="logo" class="kategori-img-logo">
             </div>
             <h6 class="mt-2">Dummy</h6>
           </a>
@@ -96,7 +96,7 @@
         <div class="card-kategori">
           <a href="#">
             <div class="container-icon">
-              <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+              <img src="img/AmoerFarm Logo.png" alt="logo" class="kategori-img-logo">
             </div>
             <h6 class="mt-2">Dummy</h6>
           </a>
@@ -104,7 +104,7 @@
         <div class="card-kategori">
           <a href="#">
             <div class="container-icon">
-              <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+              <img src="img/AmoerFarm Logo.png" alt="logo" class="kategori-img-logo">
             </div>
             <h6 class="mt-2">Dummy</h6>
           </a>
@@ -112,7 +112,7 @@
         <div class="card-kategori">
           <a href="#">
             <div class="container-icon">
-              <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+              <img src="img/AmoerFarm Logo.png" alt="logo" class="kategori-img-logo">
             </div>
             <h6 class="mt-2">Dummy</h6>
           </a>
@@ -120,7 +120,7 @@
         <div class="card-kategori">
           <a href="#">
             <div class="container-icon">
-              <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+              <img src="img/AmoerFarm Logo.png" alt="logo" class="kategori-img-logo">
             </div>
             <h6 class="mt-2">Dummy</h6>
           </a>
@@ -128,7 +128,7 @@
         <div class="card-kategori">
           <a href="#">
             <div class="container-icon">
-              <img src="img/logo-agrikalcer.png" alt="logo" class="kategori-img-logo">
+              <img src="img/AmoerFarm Logo.png" alt="logo" class="kategori-img-logo">
             </div>
             <h6 class="mt-2">Dummy</h6>
           </a>
