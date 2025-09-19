@@ -20,7 +20,7 @@
     <nav class="navbar navbar-expand-lg bg-white shadow-sm">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="#">
-          <img src="img/logo-agrikalcer.png" alt="Logo" width="100" class="me-2">
+          <img src="img/AmoerFarm Logo.png" alt="Logo" width="100" class="me-2">
         </a>
 
         <!-- hamburger -->

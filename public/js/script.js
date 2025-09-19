@@ -1,6 +1,6 @@
 // title browser bergerak
 document.addEventListener("DOMContentLoaded", function() {
-      let text = " 🌱 AgriKalcer - Toko Pertanian Modern ";
+      let text = " 🌱 AmoerFarm - Toko Pertanian Modern ";
       let i = 0;
 
       function scrollTitle() {
