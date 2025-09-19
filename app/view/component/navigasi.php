@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="img/pure-logo.png" type="image/png">
 
-  <title>Agrikalcer</title>
+  <title>AmoerFarm</title>
 </head>
 
 <body>
