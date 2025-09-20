@@ -122,18 +122,6 @@
               <i class="fas fa-info-circle me-2"></i>Deskripsi
             </button>
           </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="specifications-tab" data-bs-toggle="tab" data-bs-target="#specifications"
-              type="button" role="tab">
-              <i class="fas fa-cog me-2"></i>Spesifikasi
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button"
-              role="tab">
-              <i class="fas fa-star me-2"></i>Ulasan (<?= number_format($product['review_count']) ?>)
-            </button>
-          </li>
         </ul>
 
         <div class="tab-content mt-4" id="productTabContent">
@@ -156,44 +144,6 @@
             </div>
           </div>
 
-          <!-- Specifications -->
-          <div class="tab-pane fade" id="specifications" role="tabpanel">
-            <div class="p-4 bg-light rounded">
-              <h5>Spesifikasi Teknis</h5>
-              <div class="row">
-                <?php foreach ($product['specifications'] as $spec => $value): ?>
-                  <div class="col-md-6 mb-3">
-                    <div class="d-flex justify-content-between border-bottom pb-2">
-                      <span class="fw-bold"><?= $spec ?>:</span>
-                      <span><?= $value ?></span>
-                    </div>
-                  </div>
-                <?php endforeach; ?>
-              </div>
-            </div>
-          </div>
-
-          <!-- Reviews -->
-          <div class="tab-pane fade" id="reviews" role="tabpanel">
-            <div class="p-4 bg-light rounded">
-              <h5>Ulasan Pembeli</h5>
-              <div class="row mb-4">
-                <div class="col-md-3 text-center">
-                  <h2 class="text-primary"><?= $product['rating'] ?></h2>
-                  <div class="rating-stars mb-2">
-                    <?php for ($i = 1; $i <= 5; $i++): ?>
-                      <i class="<?= $i <= floor($product['rating']) ? 'fas' : 'far' ?> fa-star"></i>
-                    <?php endfor; ?>
-                  </div>
-                  <p class="text-muted"><?= number_format($product['review_count']) ?> ulasan</p>
-                </div>
-                <div class="col-md-9">
-                  <!-- Rating breakdown here -->
-                  <p class="text-muted">Ulasan pembeli akan ditampilkan di sini...</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
