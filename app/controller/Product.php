@@ -22,7 +22,7 @@ class Product extends Controller
           "Baterai sepanjang hari dengan charging cepat",
           "Material titanium yang kuat dan ringan"
         ],
-        "image" => ["https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop"]
+        "image" => ["https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop", "https://images.unsplash.com/photo-1574860910121-12b0a65a6209?q=80&w=1124&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]
       ],
       2 => [
         "name" => "Dummy 2",
@@ -41,7 +41,7 @@ class Product extends Controller
           "Kamera berkualitas tinggi",
           "Garansi resmi 1 tahun"
         ],
-        "image" => ["https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop"]
+        "image" => ["https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop", "https://images.unsplash.com/photo-1574860910121-12b0a65a6209?q=80&w=1124&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]
       ],
       3 => [
         "name" => "Dummy 3",
@@ -60,7 +60,7 @@ class Product extends Controller
           "Desain ergonomis",
           "Hemat energi"
         ],
-        "image" => ["https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop"]
+        "image" => ["https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop", "https://images.unsplash.com/photo-1574860910121-12b0a65a6209?q=80&w=1124&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]
       ],
       4 => [
         "name" => "Dummy 4",
@@ -79,7 +79,7 @@ class Product extends Controller
           "Mudah digunakan",
           "Harga terjangkau"
         ],
-        "image" => ["https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop"]
+        "image" => ["https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop", "https://images.unsplash.com/photo-1574860910121-12b0a65a6209?q=80&w=1124&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]
       ],
       5 => [
         "name" => "Dummy 5",
@@ -98,7 +98,7 @@ class Product extends Controller
           "Bahan ramah lingkungan",
           "Garansi panjang"
         ],
-        "image" => ["https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop"]
+        "image" => ["https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop", "https://images.unsplash.com/photo-1574860910121-12b0a65a6209?q=80&w=1124&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]
       ],
       6 => [
         "name" => "Dummy 6",
@@ -117,7 +117,7 @@ class Product extends Controller
           "Hemat daya",
           "Cocok untuk semua kalangan"
         ],
-        "image" => ["https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop"]
+        "image" => ["https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop", "https://images.unsplash.com/photo-1574860910121-12b0a65a6209?q=80&w=1124&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]
       ],
       7 => [
         "name" => "Dummy 7",
@@ -136,7 +136,7 @@ class Product extends Controller
           "Mudah dirawat",
           "Harga kompetitif"
         ],
-        "image" => ["https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop"]
+        "image" => ["https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop", "https://images.unsplash.com/photo-1574860910121-12b0a65a6209?q=80&w=1124&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]
       ],
       8 => [
         "name" => "Dummy 8",
@@ -155,7 +155,7 @@ class Product extends Controller
           "Mudah dioperasikan",
           "Garansi resmi"
         ],
-        "image" => ["https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop"]
+        "image" => ["https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop", "https://images.unsplash.com/photo-1574860910121-12b0a65a6209?q=80&w=1124&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"]
       ],
     ];
 
