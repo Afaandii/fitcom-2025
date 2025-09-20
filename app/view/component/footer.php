@@ -73,6 +73,7 @@
 <!-- bs js -->
 <script src="<?= BASEURL; ?>/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="<?= BASEURL; ?>/js/jquery-3.7.1.js"></script>
 <script src="<?= BASEURL; ?>/js/script.js"></script>
 </body>
 
