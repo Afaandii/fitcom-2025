@@ -111,3 +111,39 @@ function buyNow() {
 $(function () {
     initializeMagnifierZoom();
 });
+/* magnifier zoom end */
+
+/* register */
+$(function () {
+    $('#registerForm').on('submit', function (e) {
+        const password = $('#password').val();
+        const phone = $('#phone').val();
+
+        // Password validation
+        if (password.length < 8) {
+            e.preventDefault();
+            alert('Kata sandi minimal 8 karakter');
+            return false;
+        }
+
+        const phonePattern = /^(\+62|62|0)[0-9]{9,12}$/;
+        if (!phonePattern.test(phone.replace(/\s+/g, ''))) {
+            e.preventDefault();
+            alert('Format nomor HP tidak valid');
+            return false;
+        }
+    });
+
+    $('#phone').on('input', function () {
+        let value = $(this).val().replace(/\D/g, '');
+
+        if (value.startsWith('62')) {
+            value = '+' + value;
+        } else if (value.startsWith('0')) {
+            value = value;
+        }
+
+        $(this).val(value);
+    });
+});
+/* register end */
