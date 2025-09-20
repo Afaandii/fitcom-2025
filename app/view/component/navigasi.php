@@ -51,7 +51,7 @@
             </a>
 
             <a href="<?= BASEURL ?>/auth" class="btn btn-outline-primary me-2">Masuk</a>
-            <a href="#" class="btn btn-primary">Daftar</a>
+            <a href="<?= BASEURL ?>/auth/register" class="btn btn-primary">Daftar</a>
           </div>
         </div>
       </div>
