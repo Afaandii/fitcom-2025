@@ -60,21 +60,20 @@
     </div>
   </div>
 
-  <!-- PENTING: Container untuk produk dengan ID yang jelas -->
   <div class="container-fluid mt-4">
     <div id="product-container" class="row justify-content-center g-2 g-lg-3">
       <!-- Fallback: Render produk dengan PHP jika JavaScript gagal -->
       <?php if (isset($products) && !empty($products)): ?>
         <?php foreach ($products as $id => $product): ?>
-          <div class="col-6 col-lg-3 mb-3">
+          <div class="col-6 col-lg-3">
             <a href="/fitcom-2025/public/product/detail/<?= $id ?>" class="text-decoration-none">
-              <div class="card text-center w-100 shadow-sm rounded-3 h-100">
+              <div class="card text-center w-100 shadow-sm rounded-3">
                 <div class="p-3">
-                  <img src="<?= htmlspecialchars($product['image']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" class="img-fluid rounded-3" style="height: 200px; object-fit: cover;">
+                  <img src="<?= htmlspecialchars($product['image']); ?>" alt="<?= htmlspecialchars($product['name']); ?>" class="img-fluid rounded-3">
                 </div>
                 <div class="card-body bg-light">
-                  <h2 class="h5 fw-bold text-dark"><?= htmlspecialchars($product['name']); ?></h2>
-                  <p class="text-primary fs-6 fw-semibold mt-2 mb-0"><?= htmlspecialchars($product['price']); ?></p>
+                  <h2 class="h4 fw-bold text-dark"><?= htmlspecialchars($product['name']); ?></h2>
+                  <p class="text-primary fs-5 fw-semibold mt-2"><?= htmlspecialchars($product['price']); ?></p>
                 </div>
               </div>
             </a>

@@ -154,18 +154,19 @@ $(function () {
 // Variabel global untuk menyimpan data produk
 let allProducts = {};
 
-// Fungsi untuk render produk
+// Fungsi untuk render produk (hanya di halaman home)
 function renderProducts(productsToShow) {
-    const productContainer = $('#product-container');
+  console.log('Rendering products:', productsToShow);
+  
+  const productContainer = $('#product-container');
+  
+  if (productContainer.length === 0) {
+    // Jika tidak di halaman home, tidak perlu render
+    return;
+  }
 
-    if (productContainer.length === 0) {
-        console.error('Product container dengan ID #product-container tidak ditemukan!');
-        return;
-    }
+  productContainer.empty();
 
-    productContainer.empty();
-
-  // Jika tidak ada produk yang cocok
   if (!productsToShow || Object.keys(productsToShow).length === 0) {
     productContainer.html(`
       <div class="col-12 text-center py-5">
@@ -179,10 +180,7 @@ function renderProducts(productsToShow) {
     return;
   }
 
-  // Render setiap produk
   Object.entries(productsToShow).forEach(([id, product]) => {
-    console.log(`Rendering product ID ${id}:`, product); // Debug log
-    
     const productCard = `
       <div class="col-6 col-lg-3 mb-3">
         <a href="/fitcom-2025/public/product/detail/${id}" class="text-decoration-none">
@@ -204,22 +202,21 @@ function renderProducts(productsToShow) {
 
 // Fungsi search sederhana
 function searchProducts(query) {
-    if (!query || query.trim() === '') {
-        return allProducts;
-    }
+  console.log('Searching for:', query);
+  
+  if (!query || query.trim() === '') {
+    return allProducts;
+  }
 
-    const filteredProducts = {};
-    const searchQuery = query.toLowerCase().trim();
+  const filteredProducts = {};
+  const searchQuery = query.toLowerCase().trim();
 
-  // Loop through semua produk
   for (const [id, product] of Object.entries(allProducts)) {
-    // Search berdasarkan nama
     if (product.name && product.name.toLowerCase().includes(searchQuery)) {
       filteredProducts[id] = product;
       continue;
     }
 
-    // Search berdasarkan harga (hanya angka)
     if (product.price) {
       const priceNumbers = product.price.replace(/[^\d]/g, '');
       const queryNumbers = searchQuery.replace(/[^\d]/g, '');
@@ -230,51 +227,163 @@ function searchProducts(query) {
     }
   }
 
-    return filteredProducts;
+  return filteredProducts;
 }
 
-$(document).ready(function () {
-    if (typeof window.phpProducts !== 'undefined' && window.phpProducts) {
-        allProducts = window.phpProducts;
-        renderProducts(allProducts);
-    } else {
-        console.error('Data produk dari PHP tidak ditemukan!');
+// Fungsi untuk redirect ke home dengan search query
+function redirectToSearchResults(query) {
+  if (query && query.trim()) {
+    // Encode query untuk URL
+    const encodedQuery = encodeURIComponent(query.trim());
+    // Redirect ke home dengan parameter search
+    window.location.href = '/fitcom-2025/public/?search=' + encodedQuery;
+  } else {
+    // Jika query kosong, redirect ke home biasa
+    window.location.href = '/fitcom-2025/public/';
+  }
+}
+
+// Fungsi untuk cek apakah sedang di halaman home
+function isHomePage() {
+  const currentPath = window.location.pathname;
+  const isHome = currentPath === '/fitcom-2025/public/' || 
+                 currentPath === '/fitcom-2025/public/index.php' ||
+                 currentPath.endsWith('/public/') ||
+                 currentPath.includes('/home/');
+  console.log('Current path:', currentPath, 'Is home:', isHome);
+  return isHome;
+}
+
+// Fungsi untuk handle search dari URL parameter
+function handleSearchFromURL() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const searchQuery = urlParams.get('search');
+  
+  if (searchQuery) {
+    console.log('Search query from URL:', searchQuery);
+    
+    // Set nilai search input
+    $('input[type="search"], input[placeholder*="Cari"]').val(searchQuery);
+    
+    // Jika di halaman home, langsung filter produk
+    if (isHomePage() && allProducts && Object.keys(allProducts).length > 0) {
+      const filteredProducts = searchProducts(searchQuery);
+      renderProducts(filteredProducts);
+      
+      // Scroll ke hasil
+      setTimeout(() => {
+        if ($('#product-container').length > 0) {
+          $('html, body').animate({
+            scrollTop: $('#product-container').offset().top - 100
+          }, 300);
+        }
+      }, 100);
     }
+  }
+}
 
+// Initialize saat document ready
+$(document).ready(function() {
+  console.log('Document ready! Current page:', window.location.pathname);
+  
+  // CEK APAKAH DI HALAMAN HOME
+  const isHome = isHomePage();
+  console.log('Is home page:', isHome);
+  
+  if (isHome) {
+    // JIKA DI HALAMAN HOME - Setup data dan render
+    if (typeof window.phpProducts !== 'undefined' && window.phpProducts) {
+      console.log('Loading PHP products data');
+      allProducts = window.phpProducts;
+      
+      // Cek apakah ada search query dari URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const searchQuery = urlParams.get('search');
+      
+      if (searchQuery) {
+        // Ada search query, filter dan render
+        console.log('Applying search from URL:', searchQuery);
+        const filteredProducts = searchProducts(searchQuery);
+        renderProducts(filteredProducts);
+      } else {
+        // Tidak ada search, render semua produk
+        renderProducts(allProducts);
+      }
+    }
+    
+    // Setup search untuk halaman home (real-time filtering)
     let searchTimeout;
-    $('input[type="search"]').on('input', function () {
-        const query = $(this).val();
-        clearTimeout(searchTimeout);
-
-        searchTimeout = setTimeout(function () {
-            const filteredProducts = searchProducts(query);
-            renderProducts(filteredProducts);
-
-            if (query.trim() && $('#product-container').length > 0) {
-                $('html, body').animate({
-                    scrollTop: $('#product-container').offset().top - 100
-                }, 300);
-            }
-        }, 300);
-    });
-
-    $('form[role="search"]').on('submit', function (e) {
-        e.preventDefault();
-        const query = $(this).find('input[type="search"]').val();
+    $('input[type="search"], input[placeholder*="Cari"]').on('input', function() {
+      const query = $(this).val();
+      console.log('Search input (home page):', query);
+      
+      clearTimeout(searchTimeout);
+      
+      searchTimeout = setTimeout(function() {
         const filteredProducts = searchProducts(query);
         renderProducts(filteredProducts);
-
+        
+        // Update URL tanpa reload
+        const newUrl = query.trim() ? 
+          '/fitcom-2025/public/?search=' + encodeURIComponent(query.trim()) : 
+          '/fitcom-2025/public/';
+        window.history.replaceState({}, '', newUrl);
+        
         if (query.trim() && $('#product-container').length > 0) {
-            $('html, body').animate({
-                scrollTop: $('#product-container').offset().top - 100
-            }, 300);
+          $('html, body').animate({
+            scrollTop: $('#product-container').offset().top - 100
+          }, 300);
         }
+      }, 300);
     });
-
-    $(document).on('keyup', 'input[type="search"]', function (e) {
-        if (e.keyCode === 27) {
-            $(this).val('');
-            renderProducts(allProducts);
-        }
-    });
+    
+  } else {
+    // JIKA TIDAK DI HALAMAN HOME - Setup redirect search
+    console.log('Not on home page, setting up redirect search');
+  }
+  
+  // SETUP FORM SUBMIT UNTUK SEMUA HALAMAN (redirect ke home)
+  $('form[role="search"], form').on('submit', function(e) {
+    e.preventDefault();
+    
+    const query = $(this).find('input[type="search"], input[placeholder*="Cari"]').val();
+    console.log('Form submitted with query:', query);
+    
+    if (isHome && allProducts && Object.keys(allProducts).length > 0) {
+      // Jika di home dan ada data, filter langsung
+      const filteredProducts = searchProducts(query);
+      renderProducts(filteredProducts);
+      
+      // Update URL
+      const newUrl = query.trim() ? 
+        '/fitcom-2025/public/?search=' + encodeURIComponent(query.trim()) : 
+        '/fitcom-2025/public/';
+      window.history.replaceState({}, '', newUrl);
+      
+      if (query.trim() && $('#product-container').length > 0) {
+        $('html, body').animate({
+          scrollTop: $('#product-container').offset().top - 100
+        }, 300);
+      }
+    } else {
+      // Jika tidak di home, redirect ke home dengan query
+      redirectToSearchResults(query);
+    }
+  });
+  
+  // SETUP ESC KEY UNTUK CLEAR SEARCH
+  $(document).on('keyup', 'input[type="search"], input[placeholder*="Cari"]', function(e) {
+    if (e.keyCode === 27) {
+      console.log('ESC pressed - clearing search');
+      $(this).val('');
+      
+      if (isHome) {
+        renderProducts(allProducts);
+        window.history.replaceState({}, '', '/fitcom-2025/public/');
+      }
+    }
+  });
+  
+  // Handle search dari URL parameter (untuk direct links)
+  handleSearchFromURL();
 });
