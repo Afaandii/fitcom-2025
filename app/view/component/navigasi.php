@@ -20,7 +20,7 @@
     <!-- navbar bar -->
     <nav class="navbar navbar-expand-lg bg-white shadow-sm">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
+        <a class="navbar-brand d-flex align-items-center" href="/fitcom-2025/public">
           <img src="<?= BASEURL; ?>/img/AmoerFarm Logo.png" alt="Logo" width="100" class="me-2">
         </a>
 
