@@ -11,16 +11,35 @@
     <link rel="icon" href="<?= BASEURL ?>/img/amoer-logo-pure.png" type="image/png">
     <style>
         body {
-            background: linear-gradient(135deg, #42B883 0%,rgb(9, 146, 84) 100%);
+            background-image: url('<?= BASEURL ?>/img/bg-auth.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
             min-height: 100vh;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Overlay with green color and 50% opacity */
+            z-index: 0;
+        }
+
         .register-container {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px 0;
+            position: relative;
+            z-index: 1;
         }
         .register-card {
             background: white;
@@ -29,6 +48,8 @@
             overflow: hidden;
             width: 100%;
             max-width: 450px;
+            position: relative;
+            z-index: 2;
         }
         .register-header {
             background: #667eea;
