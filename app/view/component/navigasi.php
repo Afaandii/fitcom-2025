@@ -10,7 +10,7 @@
   <!-- Font awesome cdn -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="img/pure-logo.png" type="image/png">
+  <link rel="icon" href="img/amoer-logo-pure.png" type="image/png">
 
   <title>AmoerFarm</title>
 </head>
