@@ -1,44 +1,75 @@
-<footer class="container-fluid z-3">
-    <div class="row py-5 my-5 border-top">
-        <div class="col mb-3 ms-5">
-            <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none" aria-label="Bootstrap">
-                <img src="<?= BASEURL; ?>/img/pure-logo.png" class="bi me-4" width="80" height="80" aria-hidden="true">
-            </a>
-            <p class="text-body-secondary">Copyright© 2025 AmoerFarm, Inc</p>
+<footer class="bg-light text-light py-5">
+    <!-- divider -->
+    <hr class=" bg-dark my-4 w-100" style="height: 1.2px;">
+    <div class="container">
+        <div class="row gy-4">
+            <!-- Brand -->
+            <div class="col-12 col-lg-4 col-md-3">
+                <img src="<?= BASEURL; ?>/img/amoer-logo-pure.png" alt="footer-logo" class="img-fluid mb-3"
+                    style="max-width: 100px;">
+                <p class="mb-0 text-dark">
+                    AmoerFarm.<br>
+                    Providing reliable tech since 2025
+                </p>
+            </div>
+
+            <!-- Social -->
+            <div class="col-6 col-lg-2 col-md-3">
+                <h6 class="fw-bold mb-3 text-uppercase text-secondary">Social</h6>
+                <div class="d-flex gap-3">
+                    <a href="https://github.com/Afaandii" class="fs-2 text-dark" aria-label="github" target="_blank"
+                        rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                    <a href="/" class="fs-2 text-dark" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/ahmad-afandi-588139306/" class="fs-2 text-dark" aria-label="linkedin"
+                        target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div class="col-6 col-lg-2 col-md-2">
+                <h6 class="fw-bold mb-3 text-uppercase text-secondary">Services</h6>
+                <ul class="list-unstyled">
+                    <li><a href="/" class="text-dark text-decoration-none">Branding</a></li>
+                    <li><a href="/" class="text-dark text-decoration-none">Design</a></li>
+                    <li><a href="/" class="text-dark text-decoration-none">Marketing</a></li>
+                    <li><a href="/" class="text-dark text-decoration-none">Advertisement</a></li>
+                </ul>
+            </div>
+
+            <!-- Company -->
+            <div class="col-6 col-lg-2 col-md-2">
+                <h6 class="fw-bold mb-3 text-uppercase text-secondary">Company</h6>
+                <ul class="list-unstyled">
+                    <li><a href="/" class="text-dark text-decoration-none">About us</a></li>
+                    <li><a href="/" class="text-dark text-decoration-none">Contact</a></li>
+                    <li><a href="/" class="text-dark text-decoration-none">Jobs</a></li>
+                    <li><a href="/" class="text-dark text-decoration-none">Press kit</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal -->
+            <div class="col-6 col-lg-2 col-md-2">
+                <h6 class="fw-bold mb-3 text-uppercase text-secondary">Legal</h6>
+                <ul class="list-unstyled">
+                    <li><a href="/" class="text-dark text-decoration-none">Terms of use</a></li>
+                    <li><a href="/" class="text-dark text-decoration-none">Privacy policy</a></li>
+                    <li><a href="/" class="text-dark text-decoration-none">Cookie policy</a></li>
+                </ul>
+            </div>
         </div>
 
-        <div class="col mb-3">
+        <!-- Divider -->
+        <hr class=" bg-dark my-4 w-100" style="height: 2px;">
 
-        </div>
-        <div class="col mb-3">
-            <h5>Bantuan</h5>
-            <ul class="nav flex-column">
-                <li class="nav-item mb-2">
-                    <h6 class="p-0 text-body-secondary">Telepon</h6>
-                </li>
-                <li class="nav-item mb-2">
-                    <p class="p-0 text-body-secondary">08xxxxxxxxxx</p>
-                </li>
-                <li class="nav-item mb-2">
-                    <h6 class="p-0 text-body-secondary">Email</h6>
-                </li>
-                <li class="nav-item mb-2">
-                    <p class="p-0 text-body-secondary">amoerfarm@gmail.com</p>
-                </li>
-            </ul>
-        </div>
-        <div class="col mb-3">
-            <h5>Info Amoerfarm</h5>
-            <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-            </ul>
+        <!-- Copyright -->
+        <div class="text-start">
+            <p class="mb-0 small text-dark">
+                © <?= date("Y"); ?> AmoerFarm. All Rights Reserved.
+            </p>
         </div>
     </div>
 </footer>
+
 
 
 <!-- bs js -->
