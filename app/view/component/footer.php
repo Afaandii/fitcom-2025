@@ -17,10 +17,10 @@
             <div class="col-6 col-lg-2 col-md-3">
                 <h6 class="fw-bold mb-3 text-uppercase text-secondary">Social</h6>
                 <div class="d-flex gap-3">
-                    <a href="https://github.com/Afaandii" class="fs-2 text-dark" aria-label="github" target="_blank"
+                    <a href="#" class="fs-2 text-dark" aria-label="github" target="_blank"
                         rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
-                    <a href="/" class="fs-2 text-dark" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/ahmad-afandi-588139306/" class="fs-2 text-dark" aria-label="linkedin"
+                    <a href="#" class="fs-2 text-dark" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="fs-2 text-dark" aria-label="linkedin"
                         target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
             </div>
