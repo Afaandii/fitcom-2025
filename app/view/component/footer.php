@@ -17,11 +17,11 @@
             <div class="col-6 col-lg-2 col-md-3">
                 <h6 class="fw-bold mb-3 text-uppercase text-secondary">Social</h6>
                 <div class="d-flex gap-3">
-                    <a href="#" class="fs-2 text-dark" aria-label="github" target="_blank"
-                        rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="fs-2 text-dark" aria-label="github" target="_blank" rel="noopener noreferrer"><i
+                            class="fa-brands fa-github"></i></a>
                     <a href="#" class="fs-2 text-dark" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="fs-2 text-dark" aria-label="linkedin"
-                        target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" class="fs-2 text-dark" aria-label="linkedin" target="_blank" rel="noopener noreferrer"><i
+                            class="fa-brands fa-linkedin"></i></a>
                 </div>
             </div>
 
@@ -70,12 +70,10 @@
     </div>
 </footer>
 
-
-
 <!-- bs js -->
-<script src="js/bootstrap.bundle.min.js"></script>
+<script src="<?= BASEURL; ?>/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/script.js"></script>
+<script src="<?= BASEURL; ?>/js/script.js"></script>
 </body>
 
 </html>
