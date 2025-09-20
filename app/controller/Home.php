@@ -13,8 +13,14 @@ class Home extends Controller
       7 => ["name" => "Dummy 7", "price" => "Rp 700.000", "image" => "https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
       8 => ["name" => "Dummy 8", "price" => "Rp 800.000", "image" => "https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
     ];
+
+    $search_query = isset($_GET['search']) ? trim($_GET['search']) : '';
+
     $this->view('component/navigasi');
-    $this->view('home/home', ['products' => $list_products]);
+    $this->view('home/home', [
+      'products' => $list_products,
+      'search_query' => $search_query
+    ]);
     $this->view('component/footer');
   }
 }
