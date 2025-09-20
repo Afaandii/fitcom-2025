@@ -10,7 +10,7 @@
   <!-- Font awesome cdn -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="img/amoer-logo-pure.png" type="image/png">
+  <link rel="icon" href="<?= BASEURL ?>/img/amoer-logo-pure.png" type="image/png">
 
   <title>AmoerFarm</title>
 </head>
@@ -20,7 +20,7 @@
     <!-- navbar bar -->
     <nav class="navbar navbar-expand-lg bg-white shadow-sm">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="/fitcom-2025/public">
+        <a class="navbar-brand d-flex align-items-center" href="<?= BASEURL; ?>">
           <img src="<?= BASEURL; ?>/img/AmoerFarm Logo.png" alt="Logo" width="100" class="me-2">
         </a>
 
@@ -50,7 +50,7 @@
               </span>
             </a>
 
-            <a href="#" class="btn btn-outline-primary me-2">Masuk</a>
+            <a href="<?= BASEURL ?>/auth" class="btn btn-outline-primary me-2">Masuk</a>
             <a href="#" class="btn btn-primary">Daftar</a>
           </div>
         </div>
