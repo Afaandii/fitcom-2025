@@ -156,7 +156,6 @@ let allProducts = {};
 
 // Fungsi untuk render produk (hanya di halaman home)
 function renderProducts(productsToShow) {
-  console.log('Rendering products:', productsToShow);
   
   const productContainer = $('#product-container');
   
@@ -202,7 +201,6 @@ function renderProducts(productsToShow) {
 
 // Fungsi search sederhana
 function searchProducts(query) {
-  console.log('Searching for:', query);
   
   if (!query || query.trim() === '') {
     return allProducts;
@@ -250,50 +248,51 @@ function isHomePage() {
                  currentPath === '/fitcom-2025/public/index.php' ||
                  currentPath.endsWith('/public/') ||
                  currentPath.includes('/home/');
-  console.log('Current path:', currentPath, 'Is home:', isHome);
   return isHome;
 }
 
 // Fungsi untuk handle search dari URL parameter
 function handleSearchFromURL() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const searchQuery = urlParams.get('search');
-  
-  if (searchQuery) {
-    console.log('Search query from URL:', searchQuery);
-    
-    // Set nilai search input
-    $('input[type="search"], input[placeholder*="Cari"]').val(searchQuery);
-    
-    // Jika di halaman home, langsung filter produk
-    if (isHomePage() && allProducts && Object.keys(allProducts).length > 0) {
-      const filteredProducts = searchProducts(searchQuery);
-      renderProducts(filteredProducts);
-      
-      // Scroll ke hasil
-      setTimeout(() => {
-        if ($('#product-container').length > 0) {
-          $('html, body').animate({
-            scrollTop: $('#product-container').offset().top - 100
-          }, 300);
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchQuery = urlParams.get('search');
+
+    if (searchQuery) {
+
+        // Set nilai search input
+        $('input[type="search"], input[placeholder*="Cari"]').val(searchQuery);
+
+        // Jika di halaman home, langsung filter produk
+        if (isHomePage() && allProducts && Object.keys(allProducts).length > 0) {
+            const filteredProducts = searchProducts(searchQuery);
+            renderProducts(filteredProducts);
+
+            // Sembunyikan carousel dan kategori jika ada pencarian
+            const $carousel = $('.carousel-container');
+            const $kategori = $('.card-container');
+            $carousel.hide();
+            $kategori.hide();
+
+            // Scroll ke hasil
+            setTimeout(() => {
+                if ($('#product-container').length > 0) {
+                    $('html, body').animate({
+                        scrollTop: $('#product-container').offset().top - 100
+                    }, 300);
+                }
+            }, 100);
         }
-      }, 100);
     }
-  }
 }
 
 // Initialize saat document ready
 $(document).ready(function() {
-  console.log('Document ready! Current page:', window.location.pathname);
   
   // CEK APAKAH DI HALAMAN HOME
   const isHome = isHomePage();
-  console.log('Is home page:', isHome);
   
   if (isHome) {
     // JIKA DI HALAMAN HOME - Setup data dan render
     if (typeof window.phpProducts !== 'undefined' && window.phpProducts) {
-      console.log('Loading PHP products data');
       allProducts = window.phpProducts;
       
       // Cek apakah ada search query dari URL
@@ -302,7 +301,6 @@ $(document).ready(function() {
       
       if (searchQuery) {
         // Ada search query, filter dan render
-        console.log('Applying search from URL:', searchQuery);
         const filteredProducts = searchProducts(searchQuery);
         renderProducts(filteredProducts);
       } else {
@@ -315,31 +313,39 @@ $(document).ready(function() {
     let searchTimeout;
     $('input[type="search"], input[placeholder*="Cari"]').on('input', function() {
       const query = $(this).val();
-      console.log('Search input (home page):', query);
-      
+
+      // Sembunyikan carousel dan kategori jika ada pencarian
+      const $carousel = $('.carousel-container');
+      const $kategori = $('.card-container');
+
+      if (query.trim()) {
+          $carousel.hide();
+          $kategori.hide();
+      } else {
+          $carousel.show();
+          $kategori.show();
+      }
+
       clearTimeout(searchTimeout);
-      
+
       searchTimeout = setTimeout(function() {
-        const filteredProducts = searchProducts(query);
-        renderProducts(filteredProducts);
-        
-        // Update URL tanpa reload
-        const newUrl = query.trim() ? 
-          '/fitcom-2025/public/?search=' + encodeURIComponent(query.trim()) : 
-          '/fitcom-2025/public/';
-        window.history.replaceState({}, '', newUrl);
-        
-        if (query.trim() && $('#product-container').length > 0) {
-          $('html, body').animate({
-            scrollTop: $('#product-container').offset().top - 100
-          }, 300);
-        }
+          const filteredProducts = searchProducts(query);
+          renderProducts(filteredProducts);
+
+          // Update URL tanpa reload
+          const newUrl = query.trim() ?
+              '/fitcom-2025/public/?search=' + encodeURIComponent(query.trim()) :
+              '/fitcom-2025/public/';
+          window.history.replaceState({}, '', newUrl);
+
+          if (query.trim() && $('#product-container').length > 0) {
+              $('html, body').animate({
+                  scrollTop: $('#product-container').offset().top - 100
+              }, 300);
+          }
       }, 300);
     });
     
-  } else {
-    // JIKA TIDAK DI HALAMAN HOME - Setup redirect search
-    console.log('Not on home page, setting up redirect search');
   }
   
   // SETUP FORM SUBMIT UNTUK SEMUA HALAMAN (redirect ke home)
@@ -347,7 +353,6 @@ $(document).ready(function() {
     e.preventDefault();
     
     const query = $(this).find('input[type="search"], input[placeholder*="Cari"]').val();
-    console.log('Form submitted with query:', query);
     
     if (isHome && allProducts && Object.keys(allProducts).length > 0) {
       // Jika di home dan ada data, filter langsung
@@ -374,7 +379,6 @@ $(document).ready(function() {
   // SETUP ESC KEY UNTUK CLEAR SEARCH
   $(document).on('keyup', 'input[type="search"], input[placeholder*="Cari"]', function(e) {
     if (e.keyCode === 27) {
-      console.log('ESC pressed - clearing search');
       $(this).val('');
       
       if (isHome) {
