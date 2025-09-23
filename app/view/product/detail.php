@@ -76,9 +76,6 @@
 
             <!-- Action Buttons -->
             <div class="d-grid gap-2 d-md-flex mb-4">
-              <button class="btn btn-outline-custom flex-fill" onclick="addToWishlist()">
-                <i class="fas fa-heart me-2"></i>Wishlist
-              </button>
               <button class="btn btn-outline-custom flex-fill" onclick="addToCart()">
                 <i class="fas fa-shopping-cart me-2"></i>Keranjang
               </button>
