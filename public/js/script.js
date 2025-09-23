@@ -92,10 +92,6 @@ function decrementQuantity() {
 }
 
 // Action functions
-function addToWishlist() {
-    alert("Produk ditambahkan ke wishlist!");
-}
-
 function addToCart() {
     let quantity = $("#quantity").val();
     alert(`${quantity} produk ditambahkan ke keranjang!`);
@@ -391,3 +387,444 @@ $(document).ready(function() {
   // Handle search dari URL parameter (untuk direct links)
   handleSearchFromURL();
 });
+
+
+/* keranjang */
+// Global Cart Functions
+
+// Toggle item selection
+function toggleItemSelection(itemId, shopId) {
+    const checkbox = document.getElementById(`item-${itemId}`);
+    const isSelected = checkbox.checked;
+    
+    // Update data
+    updateItemSelection(itemId, shopId, isSelected);
+    
+    // Update shop checkbox
+    updateShopCheckbox(shopId);
+    
+    // Update summary
+    updateCartSummary();
+    
+    // Show feedback
+    showToast(isSelected ? 'Produk dipilih' : 'Produk tidak dipilih');
+}
+
+// Toggle shop selection
+function toggleShopSelection(shopId) {
+    const shopCheckbox = document.getElementById(`shop-${shopId}`);
+    const isSelected = shopCheckbox.checked;
+    
+    // Update all items in this shop
+    const shopSection = document.querySelector(`[data-shop-id="${shopId}"]`);
+    const itemCheckboxes = shopSection.querySelectorAll('.cart-item-checkbox');
+    
+    itemCheckboxes.forEach(checkbox => {
+        checkbox.checked = isSelected;
+        const itemId = parseInt(checkbox.id.replace('item-', ''));
+        updateItemSelection(itemId, shopId, isSelected);
+    });
+    
+    updateCartSummary();
+    showToast(isSelected ? 'Semua produk toko dipilih' : 'Semua produk toko tidak dipilih');
+}
+
+// Toggle select all
+function toggleSelectAll() {
+    const selectAllCheckbox = document.getElementById('selectAll');
+    const isSelected = selectAllCheckbox.checked;
+    
+    // Update all items
+    document.querySelectorAll('.cart-item-checkbox').forEach(checkbox => {
+        checkbox.checked = isSelected;
+        const itemId = parseInt(checkbox.id.replace('item-', ''));
+        const shopId = parseInt(checkbox.closest('[data-shop-id]').dataset.shopId);
+        updateItemSelection(itemId, shopId, isSelected);
+    });
+    
+    // Update all shop checkboxes
+    document.querySelectorAll('.shop-checkbox').forEach(checkbox => {
+        checkbox.checked = isSelected;
+    });
+    
+    updateCartSummary();
+    showToast(isSelected ? 'Semua produk dipilih' : 'Semua produk tidak dipilih');
+}
+
+// Update quantity
+function updateQuantity(itemId, change) {
+    const item = findCartItem(itemId);
+    if (!item) return;
+    
+    const newQuantity = item.quantity + change;
+    if (newQuantity < 1 || newQuantity > item.stock) return;
+    
+    item.quantity = newQuantity;
+    
+    // Update UI
+    const quantityInput = document.querySelector(`[data-item-id="${itemId}"] .quantity-input`);
+    quantityInput.value = newQuantity;
+    
+    // Update buttons
+    const minusBtn = document.querySelector(`[data-item-id="${itemId}"] .quantity-btn:first-child`);
+    const plusBtn = document.querySelector(`[data-item-id="${itemId}"] .quantity-btn:last-child`);
+    
+    minusBtn.disabled = newQuantity <= 1;
+    plusBtn.disabled = newQuantity >= item.stock;
+    
+    updateCartSummary();
+    showToast(`Quantity updated to ${newQuantity}`);
+}
+
+// Set quantity directly
+function setQuantity(itemId, quantity) {
+    const item = findCartItem(itemId);
+    if (!item) return;
+    
+    const newQuantity = parseInt(quantity);
+    if (newQuantity < 1 || newQuantity > item.stock) {
+        // Reset to valid value
+        document.querySelector(`[data-item-id="${itemId}"] .quantity-input`).value = item.quantity;
+        return;
+    }
+    
+    item.quantity = newQuantity;
+    updateCartSummary();
+}
+
+// Remove item
+function removeItem(itemId) {
+    if (!confirm('Hapus produk dari keranjang?')) return;
+    
+    // Find and remove item
+    cartData.cart.forEach(shop => {
+        shop.items = shop.items.filter(item => item.id !== itemId);
+    });
+    
+    // Remove empty shops
+    cartData.cart = cartData.cart.filter(shop => shop.items.length > 0);
+    
+    // Remove from DOM
+    document.querySelector(`[data-item-id="${itemId}"]`).remove();
+    
+    // Check if cart is empty
+    if (isCartEmpty()) {
+        location.reload(); // Refresh to show empty state
+    } else {
+        updateCartSummary();
+    }
+    
+    showToast('Produk dihapus dari keranjang');
+}
+
+// Add to cart from recommendation
+function addToCartFromRecommendation(productId) {
+    showToast('Produk ditambahkan ke keranjang');
+    
+    // In real app, this would make an AJAX call
+    // For demo, just show success message
+    setTimeout(() => {
+        if (confirm('Produk berhasil ditambahkan ke keranjang. Lihat keranjang?')) {
+            location.reload();
+        }
+    }, 1000);
+}
+
+// Checkout
+function checkout() {
+    const selectedItems = getSelectedItems();
+    if (selectedItems.length === 0) {
+        showToast('Pilih minimal 1 produk untuk checkout', 'warning');
+        return;
+    }
+    
+    // In real app, redirect to checkout page
+    showToast(`Checkout ${selectedItems.length} produk`, 'success');
+    
+    // Simulate checkout process
+    setTimeout(() => {
+        alert('Redirect ke halaman checkout...');
+    }, 1500);
+}
+
+// Helper Functions
+function updateItemSelection(itemId, shopId, isSelected) {
+    const item = findCartItem(itemId);
+    if (item) {
+        item.selected = isSelected;
+    }
+}
+
+function updateShopCheckbox(shopId) {
+    const shop = cartData.cart.find(s => s.shop_id === shopId);
+    if (!shop) return;
+    
+    const shopCheckbox = document.getElementById(`shop-${shopId}`);
+    const allSelected = shop.items.every(item => item.selected);
+    const noneSelected = shop.items.every(item => !item.selected);
+    
+    if (allSelected) {
+        shopCheckbox.checked = true;
+        shopCheckbox.indeterminate = false;
+    } else if (noneSelected) {
+        shopCheckbox.checked = false;
+        shopCheckbox.indeterminate = false;
+    } else {
+        shopCheckbox.indeterminate = true;
+    }
+}
+
+function updateCartSummary() {
+    let totalItems = 0;
+    let totalPrice = 0;
+    
+    cartData.cart.forEach(shop => {
+        shop.items.forEach(item => {
+            if (item.selected) {
+                totalItems += item.quantity;
+                totalPrice += item.price * item.quantity;
+            }
+        });
+    });
+    
+    const finalPrice = totalPrice + 15000; // Plus shipping
+    
+    // Update UI
+    document.getElementById('totalItems').textContent = totalItems;
+    document.getElementById('totalPrice').textContent = 'Rp ' + formatNumber(finalPrice);
+    document.getElementById('checkoutCount').textContent = totalItems;
+    
+    // Update checkout button
+    const checkoutBtn = document.getElementById('checkoutBtn');
+    checkoutBtn.disabled = totalItems === 0;
+}
+
+function findCartItem(itemId) {
+    for (let shop of cartData.cart) {
+        for (let item of shop.items) {
+            if (item.id === itemId) {
+                return item;
+            }
+        }
+    }
+    return null;
+}
+
+function getSelectedItems() {
+    const selectedItems = [];
+    cartData.cart.forEach(shop => {
+        shop.items.forEach(item => {
+            if (item.selected) {
+                selectedItems.push(item);
+            }
+        });
+    });
+    return selectedItems;
+}
+
+function isCartEmpty() {
+    return cartData.cart.length === 0 || 
+           cartData.cart.every(shop => shop.items.length === 0);
+}
+
+function formatNumber(num) {
+    return new Intl.NumberFormat('id-ID').format(num);
+}
+
+// Toast notification
+function showToast(message, type = 'info') {
+    // Remove existing toasts
+    document.querySelectorAll('.toast-notification').forEach(toast => toast.remove());
+    
+    const toast = document.createElement('div');
+    toast.className = `toast-notification alert alert-${type === 'info' ? 'primary' : type} alert-dismissible`;
+    toast.style.cssText = `
+        position: fixed;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9999;
+        min-width: 250px;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    `;
+    
+    toast.innerHTML = `
+        ${message}
+        <button type="button" class="btn-close" onclick="this.parentElement.remove()"></button>
+    `;
+    
+    document.body.appendChild(toast);
+    
+    // Fade in
+    setTimeout(() => toast.style.opacity = '1', 100);
+    
+    // Auto remove
+    setTimeout(() => {
+        if (toast.parentElement) {
+            toast.style.opacity = '0';
+            setTimeout(() => toast.remove(), 300);
+        }
+    }, 3000);
+}
+
+// Initialize page
+document.addEventListener('DOMContentLoaded', function() {
+    // Update initial summary
+    updateCartSummary();
+    
+    // Update select all checkbox
+    updateSelectAllCheckbox();
+    
+    // Initialize shop checkboxes
+    cartData.cart.forEach(shop => {
+        updateShopCheckbox(shop.shop_id);
+    });
+});
+
+function updateSelectAllCheckbox() {
+    const selectAllCheckbox = document.getElementById('selectAll');
+    if (!selectAllCheckbox) return;
+    
+    const allItems = [];
+    cartData.cart.forEach(shop => {
+        shop.items.forEach(item => allItems.push(item));
+    });
+    
+    if (allItems.length === 0) return;
+    
+    const allSelected = allItems.every(item => item.selected);
+    const noneSelected = allItems.every(item => !item.selected);
+    
+    if (allSelected) {
+        selectAllCheckbox.checked = true;
+        selectAllCheckbox.indeterminate = false;
+    } else if (noneSelected) {
+        selectAllCheckbox.checked = false;
+        selectAllCheckbox.indeterminate = false;
+    } else {
+        selectAllCheckbox.indeterminate = true;
+    }
+}
+
+// Edit mode functionality
+let editMode = false;
+document.getElementById('editCartBtn').addEventListener('click', function() {
+    editMode = !editMode;
+    toggleEditMode(editMode);
+});
+
+function toggleEditMode(isEdit) {
+    const editBtn = document.getElementById('editCartBtn');
+    const deleteButtons = document.querySelectorAll('.delete-btn');
+    
+    if (isEdit) {
+        editBtn.innerHTML = '<i class="fas fa-check"></i>';
+        deleteButtons.forEach(btn => btn.style.display = 'block');
+        showToast('Mode edit aktif');
+    } else {
+        editBtn.innerHTML = '<i class="fas fa-edit"></i>';
+        deleteButtons.forEach(btn => btn.style.display = 'none');
+        showToast('Mode edit nonaktif');
+    }
+}
+
+// Initialize edit mode (hide delete buttons initially)
+document.addEventListener('DOMContentLoaded', function() {
+    const deleteButtons = document.querySelectorAll('.delete-btn');
+    deleteButtons.forEach(btn => btn.style.display = 'none');
+});
+
+// Add keyboard shortcuts
+document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && e.key === 'a') {
+        e.preventDefault();
+        const selectAllCheckbox = document.getElementById('selectAll');
+        if (selectAllCheckbox) {
+            selectAllCheckbox.click();
+        }
+    }
+    
+    if (e.key === 'Delete' && editMode) {
+        const selectedItems = getSelectedItems();
+        if (selectedItems.length > 0 && confirm(`Hapus ${selectedItems.length} produk yang dipilih?`)) {
+            selectedItems.forEach(item => removeItem(item.id));
+        }
+    }
+});
+
+// Smooth scroll to top when back button is clicked
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Handle quantity input validation
+document.addEventListener('input', function(e) {
+    if (e.target.classList.contains('quantity-input')) {
+        const value = parseInt(e.target.value);
+        const min = parseInt(e.target.min);
+        const max = parseInt(e.target.max);
+        
+        if (value < min) {
+            e.target.value = min;
+        } else if (value > max) {
+            e.target.value = max;
+            showToast('Quantity melebihi stok yang tersedia', 'warning');
+        }
+    }
+});
+
+// Lazy loading for recommendation images
+if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src || img.src;
+                img.classList.remove('lazy');
+                observer.unobserve(img);
+            }
+        });
+    });
+    
+    document.querySelectorAll('.recommendation-image').forEach(img => {
+        imageObserver.observe(img);
+    });
+}
+
+// Handle offline/online status
+window.addEventListener('online', () => {
+    showToast('Koneksi internet tersambung kembali', 'success');
+});
+
+window.addEventListener('offline', () => {
+    showToast('Tidak ada koneksi internet', 'warning');
+});
+
+// Performance optimization: Debounce quantity updates
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Debounced quantity update for better performance
+const debouncedQuantityUpdate = debounce(updateCartSummary, 300);
+
+// Override original updateQuantity to use debounced version
+const originalUpdateQuantity = updateQuantity;
+updateQuantity = function(itemId, change) {
+    originalUpdateQuantity(itemId, change);
+    debouncedQuantityUpdate();
+};
+// keranjang end
