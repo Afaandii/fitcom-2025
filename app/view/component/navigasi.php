@@ -43,7 +43,7 @@
 
           <div class="d-flex align-items-center">
             <!-- Cart -->
-            <a href="#" class="btn btn-outline-secondary me-3 position-relative">
+            <a href="<?= BASEURL ?>/cart" class="btn btn-outline-secondary me-3 position-relative">
               <i class="fas fa-shopping-cart"></i>
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                 0
