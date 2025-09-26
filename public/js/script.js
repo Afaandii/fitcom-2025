@@ -143,11 +143,7 @@ $(function () {
 });
 /* register end */
 
-
-
-
-
-// Variabel global untuk menyimpan data produk
+// seacrh bar script
 let allProducts = {};
 
 // Fungsi untuk render produk (hanya di halaman home)
