@@ -18,7 +18,7 @@
 <body>
   <header>
     <!-- navbar bar -->
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="<?= BASEURL; ?>">
           <img src="<?= BASEURL; ?>/img/AmoerFarm Logo.png" alt="Logo" width="100" class="me-2">
@@ -45,9 +45,6 @@
             <!-- Cart -->
             <a href="<?= BASEURL ?>/cart" class="btn btn-outline-secondary me-3 position-relative">
               <i class="fas fa-shopping-cart"></i>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                0
-              </span>
             </a>
 
             <a href="<?= BASEURL ?>/auth" class="btn btn-outline-primary me-2">Masuk</a>
