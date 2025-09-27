@@ -7,7 +7,7 @@
   ];
   ?>
 
-  <div class="container mt-4">
+  <div class="detil-wrapper container mt-4">
     <!-- Check if product exists -->
     <?php if ($data['product']): ?>
       <div class="row">
