@@ -9,6 +9,22 @@ class Product extends Controller
     $this->view("template/footer");
   }
 
+  public function create()
+  {
+    $this->view("template/header");
+    $this->view("template/sidebar");
+    $this->view("product/create_product");
+    $this->view("template/footer");
+  }
+
+  public function edit()
+  {
+    $this->view("template/header");
+    $this->view("template/sidebar");
+    $this->view("product/edit_product");
+    $this->view("template/footer");
+  }
+
   public function detail($id)
   {
     $products = [
