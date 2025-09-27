@@ -11,6 +11,22 @@ $(function () {
     setInterval(scrollTitle, 250);
 });
 
+// atur posisi tetap wripper section ketika navbar fixed
+document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector(".navbar.fixed-top");
+    const wrapper = document.querySelector("section.w-100.h-100");
+    const wrapperDetil = document.querySelector(".container.mt-4");
+    const wrapperKeranjangKining = document.querySelector(".shop-section");
+
+    if (navbar && wrapper) {
+      wrapper.style.paddingTop = navbar.offsetHeight + "px";
+    } else if(navbar && wrapperDetil){
+        wrapperDetil.style.paddingTop = navbar.offsetHeight + "px";
+    } else if(navbar && wrapperKeranjangKining){
+        wrapperKeranjangKining.style.paddingTop = navbar.offsetHeight + "px";
+    }
+  });
+
 /* Magnifier zoom */
 let $imageContainer, $mainImage, $zoomLens;
 
