@@ -12,8 +12,8 @@ class Cart extends Controller
             [
               'id' => 1,
               'name' => 'dummy 1',
-              'image' => 'https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
-              'price' => 21999000,
+              'image' => 'https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              'price' => 100000,
               'original_price' => 24999000,
               'discount' => 12,
               'quantity' => 1,
@@ -24,8 +24,8 @@ class Cart extends Controller
             [
               'id' => 2,
               'name' => 'dummy 2',
-              'image' => 'https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
-              'price' => 3499000,
+              'image' => 'https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              'price' => 200000,
               'original_price' => 3999000,
               'discount' => 13,
               'quantity' => 2,
@@ -40,8 +40,8 @@ class Cart extends Controller
             [
               'id' => 3,
               'name' => 'dummy 3',
-              'image' => 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80',
-              'price' => 149000,
+              'image' => 'https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+              'price' => 300000,
               'original_price' => 199000,
               'discount' => 25,
               'quantity' => 1,
@@ -52,7 +52,7 @@ class Cart extends Controller
         ]];
         
       $this->recommendations = [
-        1 => ["id" => 1, "name" => "Dummy 1", "price" => "100.000", "discount" => 10, "image" => "https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
+        1 => ["id" => 1, "name" => "Dummy 1", "price" => "100.000", "image" => "https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
         2 => ["id" => 2, "name" => "Dummy 2", "price" => "200.000", "discount" => 15, "image" => "https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
         3 => ["id" => 3, "name" => "Dummy 3", "price" => "300.000", "discount" => 20, "image" => "https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
         4 => ["id" => 4, "name" => "Dummy 4", "price" => "400.000", "discount" => 25, "image" => "https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
