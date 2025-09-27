@@ -23,7 +23,7 @@
               </td>
               <td>
                 <div class="product-icon-container">
-                  <i class="fas fa-seedling" style="color: #8b5a2b; font-size: 20px;"></i>
+                  <img src="<?= BASEURL ?>/img/sayur.png" alt="sayur" width="100">
                 </div>
               </td>
               <td>
@@ -43,7 +43,7 @@
               </td>
               <td>
                 <div class="product-icon-container">
-                  <i class="fas fa-grape-cluster" style="color: #6f42c1; font-size: 20px;"></i>
+                  <img src="<?= BASEURL ?>/img/anggur.png" alt="anggur" width="100">
                 </div>
               </td>
               <td>
@@ -63,7 +63,7 @@
               </td>
               <td>
                 <div class="product-icon-container">
-                  <i class="fas fa-broom" style="color: #8b6914; font-size: 20px;"></i>
+                  <img src="<?= BASEURL ?>/img/pacul.png" alt="pacul" width="100">
                 </div>
               </td>
               <td>
