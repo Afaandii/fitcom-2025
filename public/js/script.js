@@ -15,7 +15,7 @@ $(function () {
 document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.querySelector(".navbar.fixed-top");
     const wrapper = document.querySelector("section.w-100.h-100");
-    const wrapperDetil = document.querySelector(".container.mt-4");
+    const wrapperDetil = document.querySelector(".detil-wrapper");
     const wrapperKeranjangKining = document.querySelector(".shop-section");
 
     if (navbar && wrapper) {

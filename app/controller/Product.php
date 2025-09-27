@@ -1,7 +1,14 @@
 <?php
-
 class Product extends Controller
 {
+  public function index()
+  {
+    $this->view("template/header");
+    $this->view("template/sidebar");
+    $this->view("product/product_home");
+    $this->view("template/footer");
+  }
+
   public function detail($id)
   {
     $products = [
