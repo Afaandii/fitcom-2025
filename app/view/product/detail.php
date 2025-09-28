@@ -54,12 +54,8 @@
             <!-- Price -->
             <div class="mb-4">
               <div class="d-flex align-items-center gap-3 mb-2">
-                <h2 class="h4 text-primary fw-bold mb-0"><?= $product['price'] ?></h2>
-                <span class="price-original">Rp <?= number_format($product['original_price']) ?></span>
-                <span class="price-discount"><?= $product['discount'] ?>%</span>
+                <h2 class="h4 text-primary fw-bold mb-0">Rp <?= $product['price'] ?></h2>
               </div>
-              <p class="text-success mb-0"><i class="fas fa-check-circle"></i> Hemat Rp
-                <?= number_format($product['original_price'] - 21999000) ?></p>
             </div>
 
             <!-- Quantity -->
