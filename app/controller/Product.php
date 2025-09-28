@@ -222,24 +222,4 @@ class Product extends Controller
       ]
     ];
   }
-
-  public function index()
-  {
-    $products = $this->getProducts();
-
-    $this->view("template/header");
-    $this->view("template/sidebar");
-    $this->view("product/product_home", ["products" => $products]); // kirim semua produk
-    $this->view("template/footer");
-  }
-
-  public function detail($id)
-  {
-    $products = $this->getProducts();
-    $product = $products[$id] ?? null;
-
-    $this->view('component/navigasi');
-    $this->view('product/detail', ["product" => $product]);
-    $this->view('component/footer');
-  }
 }
