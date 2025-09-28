@@ -1,8 +1,31 @@
 <?php
 class Product extends Controller
 {
-  // function khusus untuk data produk
-  private function getProducts()
+  public function index()
+  {
+    $this->view("template/header");
+    $this->view("template/sidebar");
+    $this->view("product/product_home");
+    $this->view("template/footer");
+  }
+
+  public function create()
+  {
+    $this->view("template/header");
+    $this->view("template/sidebar");
+    $this->view("product/create_product");
+    $this->view("template/footer");
+  }
+
+  public function edit()
+  {
+    $this->view("template/header");
+    $this->view("template/sidebar");
+    $this->view("product/edit_product");
+    $this->view("template/footer");
+  }
+
+  public function detail($id)
   {
     return [
       1 => [

@@ -69,7 +69,7 @@
       <?php if (isset($products) && !empty($products)): ?>
         <?php foreach ($products as $id => $product): ?>
           <div class="col-6 col-lg-3">
-            <a href="/fitcom-2025/public/product/detail/<?= $id ?>" class="text-decoration-none">
+            <a href="<?= BASEURL ?>/product/detail/<?= $id ?>" class="text-decoration-none">
               <div class="card text-center w-100 shadow-sm rounded-3">
                 <div class="p-3">
                   <img src="<?= htmlspecialchars($product['image']); ?>" alt="<?= htmlspecialchars($product['name']); ?>"
