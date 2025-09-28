@@ -9,13 +9,13 @@
   <meta name="author" content="" />
   <title>AmoerFarm Dashboard</title>
   <!-- bs css -->
-  <link rel="stylesheet" href="<?= BASEURL; ?>css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?= BASEURL; ?>/css/bootstrap.min.css">
   <!-- Font awesome cdn -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="<?= BASEURL; ?>/css/style.css">
   <link rel="icon" href="<?= BASEURL ?>/img/amoer-logo-pure.png" type="image/png">
   <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
   <link href="<?= BASEURL ?>/css/bs.css" rel="stylesheet" />
+  <link rel="stylesheet" href="<?= BASEURL; ?>/css/style.css">
   <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 

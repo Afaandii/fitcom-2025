@@ -893,3 +893,262 @@
     }
 }
 /* keranjang end */
+
+/* style product dashboard */
+.btn-tambah {
+    background-color: #2c5aa0;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.btn-tambah:hover {
+    background-color: #1e3d6f;
+    color: white;
+}
+
+.table-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+    vertical-align: middle;
+    padding: 15px 8px;
+}
+
+.table tbody td {
+    vertical-align: middle;
+    text-align: center;
+    padding: 15px 8px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.btn-edit {
+    background-color: #2c5aa0;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-edit:hover {
+    background-color: #1e3d6f;
+    color: white;
+}
+
+/* style create form */
+.form-container {
+    background-color: white !important;
+    border: 3px solid #000000 !important;
+    border-radius: 8px !important;
+    padding: 2rem !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+}
+
+.form-label {
+    background-color: #f8f9fa !important;
+    border: 1px solid #000 !important;
+    padding: 8px 12px !important;
+    font-weight: 500 !important;
+    color: #000 !important;
+    margin-bottom: 0 !important;
+    border-radius: 4px 0 0 4px !important;
+    min-width: 100px !important;
+    text-align: left !important;
+    font-size: 14px !important;
+}
+
+.form-input {
+    border: 1px solid #000 !important;
+    border-left: none !important;
+    border-radius: 0 4px 4px 0 !important;
+    padding: 8px 12px !important;
+    font-size: 14px !important;
+    flex: 1 !important;
+}
+
+.form-input:focus {
+    border-color: #4e73df !important;
+    box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25) !important;
+    outline: 0 !important;
+}
+
+.form-group {
+    margin-bottom: 1rem !important;
+}
+
+.input-group-custom {
+    display: flex !important;
+    width: 100% !important;
+}
+
+.btn-save {
+    background-color: #e67e22 !important;
+    color: black !important;
+    border: 1px solid #e67e22 !important;
+    padding: 8px 16px !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    margin-right: 12px !important;
+    min-width: 100px !important;
+}
+
+.btn-save:hover {
+    background-color: #d35400 !important;
+    border-color: #d35400 !important;
+    color: white !important;
+}
+
+.btn-cancel {
+    background-color: #e67e22 !important;
+    color: black !important;
+    border: 1px solid #e67e22 !important;
+    padding: 8px 16px !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    min-width: 100px !important;
+}
+
+.btn-cancel:hover {
+    background-color: #d35400 !important;
+    border-color: #d35400 !important;
+    color: white !important;
+}
+
+.form-buttons {
+    margin-top: 1.5rem !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+    gap: 8rem;
+}
+
+/* style edit form */
+.form-edit-container {
+    background-color: white !important;
+    border: 3px solid #000000 !important;
+    border-radius: 8px !important;
+    padding: 2rem !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+}
+
+.form-edit-group {
+    margin-bottom: 1rem !important;
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+.form-edit-label {
+     background-color: #f8f9fa !important;
+    border: 1px solid #000 !important;
+    padding: 8px 12px !important;
+    font-weight: 500 !important;
+    color: #000 !important;
+    margin-bottom: 0 !important;
+    border-radius: 4px 0 0 4px !important;
+    min-width: 100px !important;
+    text-align: left !important;
+    font-size: 14px !important;
+}
+
+.form-edit-input {
+   border: 1px solid #000 !important;
+    border-left: none !important;
+    border-radius: 0 4px 4px 0 !important;
+    padding: 8px 12px !important;
+    font-size: 14px !important;
+    flex: 1 !important;
+}
+
+.form-edit-input:focus {
+    border-color: #4e73df !important;
+    box-shadow: none !important;
+    outline: 0 !important;
+}
+
+.form-edit-buttons {
+    margin-top: 1.5rem !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem !important;
+}
+
+.btn-update {
+    background-color: #e67e22 !important;
+    color: black !important;
+    border: 1px solid #e67e22 !important;
+    padding: 8px 16px !important;
+    border-radius: 4px !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    min-width: 100px !important;
+}
+
+.btn-update:hover {
+    background-color: #d35400 !important;
+    border-color: #d35400 !important;
+    color: white !important;
+}
+
+.btn-delete {
+    background-color: #e67e22 !important;
+    color: black !important;
+    border: 1px solid #e67e22 !important;
+    padding: 8px 16px !important;
+    border-radius: 4px !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    min-width: 100px !important;
+}
+
+.btn-delete:hover {
+    background-color: #d35400 !important;
+    border-color: #d35400 !important;
+    color: white !important;
+}
+
+.btn-cancel-edit {
+    background-color: #e67e22 !important;
+    color: black !important;
+    border: 1px solid #e67e22 !important;
+    padding: 8px 16px !important;
+    border-radius: 4px !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    min-width: 100px !important;
+}
+
+.btn-cancel-edit:hover {
+    background-color: #d35400 !important;
+    border-color: #d35400 !important;
+    color: white !important;
+}
+/* style product dashboard end */
