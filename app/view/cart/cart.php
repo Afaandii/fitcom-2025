@@ -39,7 +39,7 @@
 
                                     <!-- Price -->
                                     <div class="d-flex align-items-center mb-2">
-                                        <span class="price-current me-2">Rp <?= number_format($item['price']) ?></span>
+                                        <span class="price-current me-2">Rp <?= $item['price'] ?></span>
                                     </div>
 
                                     <!-- Quantity Controller -->
