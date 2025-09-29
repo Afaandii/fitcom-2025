@@ -14,13 +14,6 @@
         <div class="cart-items">
             <?php foreach ($dataCart['cart'] as $shopIndex => $shop): ?>
                 <div class="shop-section" data-shop-id="<?= $shop['shop_id'] ?>">
-                    <!-- Shop Header -->
-                    <div class="shop-header">
-                        <input type="checkbox" class="shop-checkbox" id="shop-<?= $shop['shop_id'] ?>"
-                            onchange="toggleShopSelection(<?= $shop['shop_id'] ?>)">
-                        <i class="fas fa-store ms-2 me-2 text-primary"></i>
-                    </div>
-
                     <!-- Shop Items -->
                     <?php foreach ($shop['items'] as $itemIndex => $item): ?>
                         <div class="cart-item" data-item-id="<?= $item['id'] ?>">
@@ -32,16 +25,13 @@
 
                                 <!-- Product Image -->
                                 <img src="<?= $item['image'] ?>" alt="<?= $item['name'] ?>" class="cart-item-image me-3">
-
                                 <!-- Product Info -->
                                 <div class="flex-grow-1">
                                     <h6 class="mb-1 fw-medium"><?= $item['name'] ?></h6>
-
                                     <!-- Price -->
                                     <div class="d-flex align-items-center mb-2">
-                                        <span class="price-current me-2">Rp <?= $item['price'] ?></span>
+                                        <span class="price-current me-2">Rp <?= number_format($item['price'], 0, ',', '.') ?></span>
                                     </div>
-
                                     <!-- Quantity Controller -->
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div class="quantity-controller">
@@ -56,13 +46,11 @@
                                                 <i class="fas fa-plus"></i>
                                             </button>
                                         </div>
-
                                         <!-- Delete Button -->
                                         <button class="delete-btn" onclick="removeItem(<?= $item['id'] ?>)">
                                             <i class="fas fa-trash"></i>
                                         </button>
                                     </div>
-
                                     <p class="text-muted small mb-0 mt-1">Stok: <?= $item['stock'] ?></p>
                                 </div>
                             </div>
@@ -83,8 +71,10 @@
                         <div class="card text-center w-100 shadow-sm rounded-3 h-100">
                             <a href="/fitcom-2025/public/product/detail/<?= $product['id'] ?>" class="text-decoration-none">
                                 <div class="p-3">
-                                    <img src="<?= htmlspecialchars($product['image']); ?>" alt="<?= htmlspecialchars($product['name']); ?>"
-                                        class="img-fluid rounded-3">
+                                    <div class="product-img-wrapper recommendation-image">
+                                        <img src="<?= htmlspecialchars($product['image']); ?>" alt="<?= htmlspecialchars($product['name']); ?>"
+                                            class="img-fluid h-100 object-fit-contain rounded-3">
+                                    </div>
                                 </div>
                             </a>
                             <div class="card-body bg-light">
