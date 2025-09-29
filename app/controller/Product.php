@@ -27,199 +27,186 @@ class Product extends Controller
 
   public function detail($id)
   {
-    return [
+    $products = [
       1 => [
         "kode" => "PRD001",
-        "name" => "Dummy 1",
-        "satuan" => "Pcs",
-        "price" => "100.000",
+        "name" => "Beras",
+        "satuan" => "Kg",
+        "price" => "112.000",
         "rating" => "4.5",
         "review_count" => "19",
         "sold" => "23",
-        "original_price" => "128.000",
-        "discount" => "18",
         "stock" => "43",
-        "description" => "Produk ini uwapik",
+        "description" => "Beras 5 kg merk sania",
         "features" => [
-          "Chip A17 Pro dengan performa yang luar biasa",
-          "Sistem kamera Pro dengan zoom optik 5x",
-          "Layar Super Retina XDR 6.7 inci",
-          "Baterai sepanjang hari dengan charging cepat",
-          "Material titanium yang kuat dan ringan"
+          "Beras pulen",
+          "Harga terjangkau",
+          "Aroma wangi"
         ],
         "image" => [
-          "https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1574860910121-12b0a65a6209?q=80&w=1124&auto=format&fit=crop"
+          BASEURL . "/img/beras.png",
+          BASEURL . "/img/beras2.png"
         ]
       ],
       2 => [
         "kode" => "PRD002",
-        "name" => "Dummy 2",
-        "satuan" => "Kg",
-        "price" => "200.000",
+        "name" => "Biji Kopi 250 gram",
+        "satuan" => "Gram",
+        "price" => "85.000",
         "rating" => "4.0",
         "review_count" => "15",
         "sold" => "30",
-        "original_price" => "250.000",
-        "discount" => "20",
         "stock" => "50",
-        "description" => "Produk ini sangat bagus",
+        "description" => "Biji Kopi Arabika 250 gram",
         "features" => [
-          "Desain modern dan elegan",
-          "Kapasitas baterai besar",
-          "Layar Full HD",
-          "Kamera berkualitas tinggi",
-          "Garansi resmi 1 tahun"
+          "Aroma kopi asli",
+          "Rasa kopi kuat",
+          "Mudah diseduh",
+          "Cocok untuk espresso",
+          "Kopi organik"
         ],
         "image" => [
-          "https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1574860910121-12b0a65a6209?q=80&w=1124&auto=format&fit=crop"
+          BASEURL . "/img/kopi.png",
+          BASEURL . "/img/kopi2.png"
         ]
       ],
       3 => [
         "kode" => "PRD003",
-        "name" => "Dummy 3",
-        "satuan" => "Liter",
-        "price" => "300.000",
+        "name" => "Melon",
+        "satuan" => "Biji",
+        "price" => "10.000",
         "rating" => "4.2",
         "review_count" => "25",
         "sold" => "40",
-        "original_price" => "350.000",
-        "discount" => "15",
         "stock" => "60",
-        "description" => "Produk ini berkualitas tinggi",
+        "description" => "Melon ini berkualitas tinggi",
         "features" => [
-          "Material premium",
-          "Performa cepat dan stabil",
-          "Kompatibel dengan berbagai perangkat",
-          "Desain ergonomis",
-          "Hemat energi"
+          "Rasa manis dan segar",
+          "Tekstur lembut",
+          "Kulit tipis",
+          "Mudah dicerna",
+          "Kaya akan vitamin"
         ],
         "image" => [
-          "https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1574860910121-12b0a65a6209?q=80&w=1124&auto=format&fit=crop"
+          BASEURL . "/img/melon.png",
+          BASEURL . "/img/melon2.png"
         ]
       ],
       4 => [
         "kode" => "PRD004",
-        "name" => "Dummy 4",
-        "satuan" => "Pack",
-        "price" => "400.000",
+        "name" => "Jagung",
+        "satuan" => "kg",
+        "price" => "5.500",
         "rating" => "4.8",
         "review_count" => "30",
         "sold" => "50",
-        "original_price" => "450.000",
-        "discount" => "10",
         "stock" => "70",
-        "description" => "Produk ini sangat direkomendasikan",
+        "description" => "Jagung 1 kilo gram",
         "features" => [
-          "Kualitas terbaik di kelasnya",
-          "Desain minimalis",
-          "Tahan lama",
-          "Mudah digunakan",
-          "Harga terjangkau"
+          "jagung segar",
+          "Rasa manis alami",
+          "Tekstur renyah",
+          "Mudah dimasak",
+          "Kaya serat"
         ],
         "image" => [
-          "https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1574860910121-12b0a65a6209?q=80&w=1124&auto=format&fit=crop"
+          BASEURL . "/img/jagung.png",
+          BASEURL . "/img/jagung2.png"
         ]
       ],
       5 => [
         "kode" => "PRD005",
-        "name" => "Dummy 5",
-        "satuan" => "Box",
-        "price" => "500.000",
+        "name" => "Cabai Rawit",
+        "satuan" => "kg",
+        "price" => "43.000",
         "rating" => "4.6",
         "review_count" => "35",
         "sold" => "60",
-        "original_price" => "550.000",
-        "discount" => "9",
         "stock" => "80",
-        "description" => "Produk ini memiliki fitur lengkap",
+        "description" => "Cabai rawit 1 kilo gram",
         "features" => [
-          "Fitur canggih",
-          "Desain stylish",
-          "Mudah dibersihkan",
-          "Bahan ramah lingkungan",
-          "Garansi panjang"
+          "Pedas alami",
+          "Segar dan renyah",
+          "Tahan lama",
+          "Mudah diolah",
         ],
         "image" => [
-          "https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1574860910121-12b0a65a6209?q=80&w=1124&auto=format&fit=crop"
+          BASEURL . "/img/lombok.png",
+          BASEURL . "/img/lombok2.png"
         ]
       ],
       6 => [
         "kode" => "PRD006",
-        "name" => "Dummy 6",
-        "satuan" => "Set",
-        "price" => "600.000",
+        "name" => "Timun",
+        "satuan" => "Biji",
+        "price" => "7.000",
         "rating" => "4.7",
         "review_count" => "40",
         "sold" => "70",
-        "original_price" => "650.000",
-        "discount" => "8",
         "stock" => "90",
-        "description" => "Produk ini sangat populer",
+        "description" => "Timun segar dan berkualitas",
         "features" => [
-          "Performa tinggi",
-          "Desain kompak",
-          "Mudah dibawa",
-          "Hemat daya",
-          "Cocok untuk semua kalangan"
+          "Segar dan renyah",
+          "Kaya akan air",
+          "Rendah kalori",
+          "Menyehatkan kulit",
+          "Cocok untuk lalapan",
         ],
         "image" => [
-          "https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1574860910121-12b0a65a6209?q=80&w=1124&auto=format&fit=crop"
+          BASEURL . "/img/timun.png",
+          BASEURL . "/img/timun2.png"
         ]
       ],
       7 => [
         "kode" => "PRD007",
-        "name" => "Dummy 7",
-        "satuan" => "Unit",
-        "price" => "700.000",
+        "name" => "Sawi",
+        "satuan" => "Ikat",
+        "price" => "10.000",
         "rating" => "4.9",
         "review_count" => "45",
         "sold" => "80",
-        "original_price" => "750.000",
-        "discount" => "7",
         "stock" => "100",
-        "description" => "Produk ini terbaik di kelasnya",
+        "description" => "Sawi hijau segar",
         "features" => [
-          "Teknologi terbaru",
-          "Desain eksklusif",
-          "Tahan air",
-          "Mudah dirawat",
+          "Segar dan Hijau",
+          "Kaya nutrisi",
+          "gizi tinggi",
+          "Rasa lezat",
           "Harga kompetitif"
         ],
         "image" => [
-          "https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1574860910121-12b0a65a6209?q=80&w=1124&auto=format&fit=crop"
+          BASEURL . "/img/sawi.png",
+          BASEURL . "/img/sawi2.png"
         ]
       ],
       8 => [
         "kode" => "PRD008",
-        "name" => "Dummy 8",
+        "name" => "Wortel",
         "satuan" => "Bundle",
-        "price" => "800.000",
+        "price" => "5.000",
         "rating" => "5.0",
         "review_count" => "50",
         "sold" => "90",
-        "original_price" => "850.000",
-        "discount" => "6",
         "stock" => "110",
-        "description" => "Produk ini sangat luar biasa",
+        "description" => "Wortel segar dan manis",
         "features" => [
-          "Kinerja maksimal",
-          "Desain futuristik",
+          "Segar dan manis",
+          "Kaya vitamin A",
+          "Cocok untuk jus",
           "Bahan berkualitas tinggi",
-          "Mudah dioperasikan",
-          "Garansi resmi"
+          "Rasa alami",
         ],
         "image" => [
-          "https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1574860910121-12b0a65a6209?q=80&w=1124&auto=format&fit=crop"
+          BASEURL . "/img/wortel.png",
+          BASEURL . "/img/wortel2.png"
         ]
       ]
     ];
+
+    $product = $products[$id] ?? null;
+
+    $this->view("component/navigasi");
+    $this->view("product/detail", ["product" => $product]);
+    $this->view("component/footer");
   }
 }
