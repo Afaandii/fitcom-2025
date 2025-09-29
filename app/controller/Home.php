@@ -4,14 +4,14 @@ class Home extends Controller
   public function index()
   {
     $list_products = [
-      1 => ["name" => "Dummy 1", "price" => "Rp 100.000", "image" => "https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
-      2 => ["name" => "Dummy 2", "price" => "Rp 200.000", "image" => "https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
-      3 => ["name" => "Dummy 3", "price" => "Rp 300.000", "image" => "https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
-      4 => ["name" => "Dummy 4", "price" => "Rp 400.000", "image" => "https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
-      5 => ["name" => "Dummy 5", "price" => "Rp 500.000", "image" => "https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
-      6 => ["name" => "Dummy 6", "price" => "Rp 600.000", "image" => "https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
-      7 => ["name" => "Dummy 7", "price" => "Rp 700.000", "image" => "https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
-      8 => ["name" => "Dummy 8", "price" => "Rp 800.000", "image" => "https://images.unsplash.com/photo-1615485020475-ba867eb72d7f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
+      1 => ["name" => "Beras", "price" => "Rp 112.000", "image" => BASEURL . "/img/beras.png"],
+      2 => ["name" => "Biji Kopi", "price" => "Rp 85.000", "image" => BASEURL . "/img/kopi.png"],
+      3 => ["name" => "Melon", "price" => "Rp 10.000", "image" => BASEURL . "/img/melon.png"],
+      4 => ["name" => "Jagung", "price" => "Rp 5.500", "image" => BASEURL . "/img/jagung.png"],
+      5 => ["name" => "Cabai Rawit", "price" => "Rp 43.000", "image" => BASEURL . "/img/lombok.png"],
+      6 => ["name" => "Timun", "price" => "Rp 7.000", "image" => BASEURL . "/img/timun.png"],
+      7 => ["name" => "Sawi", "price" => "Rp 10.000", "image" => BASEURL . "/img/sawi.png"],
+      8 => ["name" => "Worter", "price" => "Rp 5.000", "image" => BASEURL . "/img/wortel.png"],
     ];
 
     $search_query = isset($_GET['search']) ? trim($_GET['search']) : '';
