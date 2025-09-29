@@ -96,7 +96,6 @@
                   <p class="text-muted"><?= $seller['response_time'] ?></p>
                 </div>
               </div>
-              <button class="btn btn-outline-primary btn-sm">Kunjungi Toko</button>
             </div>
           </div>
         </div>
