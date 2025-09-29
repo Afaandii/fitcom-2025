@@ -809,24 +809,13 @@
     margin-bottom: 100px; /* Space for fixed bottom */
 }
 
-.recommendation-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease;
-    cursor: pointer;
-}
-
-.recommendation-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
 .recommendation-image {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
+    width: 100%;         /* biar ikut lebar parent */
+  height: 200px;       /* semua fix tingginya sama */
+  object-fit: contain; /* gambar disesuaikan, ga kepotong */
+  border-radius: 12px; /* opsional: rounded */
+  background: #fff;    /* kasih background biar rapi */
+  padding: 10px;       /* jarak biar ga nempel */
 }
 
 .recommendation-content {
