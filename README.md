@@ -64,7 +64,10 @@ fitcom-2025/
 │   │   ├── home/
 │   │   │   └── home.php    
 │   │   ├── product/
-│   │   │   └── detail.php
+│   │   │   ├── create_product.php
+│   │   │   ├── detail.php
+│   │   │   ├── edit_product.php
+│   │   │   └── product_home.php
 │   │   ├── template/
 │   │   │   ├── footer.php
 │   │   │   ├── header.php
@@ -88,6 +91,7 @@ fitcom-2025/
 │   ├── img/
 │   │   ├── amoer-logo-pure.png    
 │   │   ├── AmoerFarm Logo.png
+│   │   ├── dan image product lainnya
 │   │   └── bg-auth.jpg           
 │   ├── js/
 │   │   ├── bootstrap.bundle.js
