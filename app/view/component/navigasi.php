@@ -58,19 +58,22 @@
     <nav class="bottom-nav">
       <ul class="nav">
         <li class="nav-item">
-          <a href="<?= BASEURL; ?>" class="nav-link active">
+          <a href="<?= BASEURL; ?>"
+            class="nav-link <?= ($_SERVER['REQUEST_URI'] == '/fitcom-2025/public/' ? 'active' : '') ?>">
             <i class="fas fa-home"></i>
             <span>Beranda</span>
           </a>
         </li>
         <li class="nav-item">
-          <a href="<?= BASEURL; ?>/cart" class="nav-link position-relative">
+          <a href="<?= BASEURL; ?>/cart"
+            class="nav-link <?= (strpos($_SERVER['REQUEST_URI'], '/cart') !== false ? 'active' : '') ?>">
             <i class="fas fa-shopping-cart"></i>
             <span>Keranjang</span>
           </a>
         </li>
         <li class="nav-item">
-          <a href="<?= BASEURL; ?>/auth" class="nav-link">
+          <a href="<?= BASEURL; ?>/auth"
+            class="nav-link <?= (strpos($_SERVER['REQUEST_URI'], '/auth') !== false ? 'active' : '') ?>">
             <i class="fas fa-user"></i>
             <span>Akun</span>
           </a>
