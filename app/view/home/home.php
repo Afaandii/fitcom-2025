@@ -48,46 +48,46 @@
   <div class="container-fluid bg-light rounded-2 mt-3">
     <div class="card-container">
       <div class="card-scroll justify-content-lg-center gap-lg-4">
-          <div class="card-kategori col-3">
-            <a href="#">
-              <div class="container-icon">
-                <img src="img/gubis.jpg" alt="logo" class="kategori-img-logo">
-              </div>
-              <h6 class="mt-2">Sayur</h6>
-            </a>
-          </div>
-          <div class="card-kategori col-3">
-            <a href="#">
-              <div class="container-icon">
-                <img src="img/gomu.jpeg" alt="logo" class="kategori-img-logo">
-              </div>
-              <h6 class="mt-2">Buah</h6>
-            </a>
-          </div>
-          <div class="card-kategori col-3">
-            <a href="#">
-              <div class="container-icon">
-                <img src="img/biji.jpg" alt="logo" class="kategori-img-logo">
-              </div>
-              <h6 class="mt-2">Biji-bijian</h6>
-            </a>
-          </div>
-          <div class="card-kategori col-3">
-            <a href="#">
-              <div class="container-icon">
-                <img src="img/ubi.jpg" alt="logo" class="kategori-img-logo">
-              </div>
-              <h6 class="mt-2">Ubi-ubian</h6>
-            </a>
-          </div>
-          <div class="card-kategori col-3">
-            <a href="#">
-              <div class="container-icon">
-                <img src="img/pacul.png" alt="logo" class="kategori-img-logo">
-              </div>
-              <h6 class="mt-2">Peralatan</h6>
-            </a>
-          </div>
+        <div class="card-kategori col-3">
+          <a href="<?= BASEURL ?>">
+            <div class="container-icon">
+              <img src="img/gubis.jpg" alt="logo" class="kategori-img-logo">
+            </div>
+            <h6 class="mt-2">Sayur</h6>
+          </a>
+        </div>
+        <div class="card-kategori col-3">
+          <a href="<?= BASEURL ?>">
+            <div class="container-icon">
+              <img src="img/gomu.jpeg" alt="logo" class="kategori-img-logo">
+            </div>
+            <h6 class="mt-2">Buah</h6>
+          </a>
+        </div>
+        <div class="card-kategori col-3">
+          <a href="<?= BASEURL ?>">
+            <div class="container-icon">
+              <img src="img/biji.jpg" alt="logo" class="kategori-img-logo">
+            </div>
+            <h6 class="mt-2">Biji-bijian</h6>
+          </a>
+        </div>
+        <div class="card-kategori col-3">
+          <a href="<?= BASEURL ?>">
+            <div class="container-icon">
+              <img src="img/ubi.jpg" alt="logo" class="kategori-img-logo">
+            </div>
+            <h6 class="mt-2">Ubi-ubian</h6>
+          </a>
+        </div>
+        <div class="card-kategori col-3">
+          <a href="<?= BASEURL ?>">
+            <div class="container-icon">
+              <img src="img/pacul.png" alt="logo" class="kategori-img-logo">
+            </div>
+            <h6 class="mt-2">Peralatan</h6>
+          </a>
+        </div>
       </div>
     </div>
   </div>
