@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- bs css -->
-  <link rel="stylesheet" href="<?= BASEURL; ?>css/bootstrap.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Font awesome cdn -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="<?= BASEURL; ?>/css/style.css">
   <link rel="icon" href="<?= BASEURL ?>/img/amoer-logo-pure.png" type="image/png">
+  <link rel="stylesheet" href="<?= BASEURL; ?>/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?= BASEURL; ?>/css/style.css">
 
   <title>AmoerFarm</title>
 </head>
@@ -52,6 +52,30 @@
           </div>
         </div>
       </div>
+    </nav>
+
+    <!-- untuk ukuran mobile bagian bottom -->
+    <nav class="bottom-nav">
+      <ul class="nav">
+        <li class="nav-item">
+          <a href="<?= BASEURL; ?>" class="nav-link active">
+            <i class="fas fa-home"></i>
+            <span>Beranda</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="<?= BASEURL; ?>/cart" class="nav-link position-relative">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Keranjang</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="<?= BASEURL; ?>/auth" class="nav-link">
+            <i class="fas fa-user"></i>
+            <span>Akun</span>
+          </a>
+        </li>
+      </ul>
     </nav>
     <!-- navbar end -->
   </header>

@@ -53,7 +53,7 @@ class Cart extends Controller
         ]
       ]
     ];
-    
+
 
     $this->recommendations = [
       1 => ["id" => 1, "name" => "Beras", "price" => "112.000", "image" => BASEURL . "/img/beras.png"],
@@ -102,14 +102,12 @@ class Cart extends Controller
   {
     $totalItems = 0;
     $totalPrice = 0;
-    $totalDiscount = 0;
 
     foreach ($this->cartItems as $shop) {
       foreach ($shop['items'] as $item) {
         if ($item['selected']) {
           $totalItems += $item['quantity'];
           $totalPrice += $item['price'] * $item['quantity'];
-          $totalDiscount += ($item['original_price'] - $item['price']) * $item['quantity'];
         }
       }
     }
@@ -117,7 +115,6 @@ class Cart extends Controller
     return [
       'total_items' => $totalItems,
       'total_price' => $totalPrice,
-      'total_discount' => $totalDiscount,
       'final_price' => $totalPrice
     ];
   }
