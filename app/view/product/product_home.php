@@ -4,16 +4,16 @@
       <a href="<?= BASEURL ?>/product/create" class="btn btn-tambah">
         <i class="fas fa-plus me-2"></i>Tambah
       </a>
-      <div class="table-container">
-        <table class="table table-striped">
+      <div class="table-container table-responsive">
+        <table class="table table-striped table-hover">
           <thead>
             <tr>
-              <th scope="col" style="width: 15%;">Action</th>
-              <th scope="col" style="width: 15%;">Gambar</th>
-              <th scope="col" style="width: 15%;">Kode</th>
-              <th scope="col" style="width: 25%;">Nama</th>
-              <th scope="col" style="width: 15%;">Satuan</th>
-              <th scope="col" style="width: 18%;">Harga</th>
+              <th scope="col">Action</th>
+              <th scope="col">Gambar</th>
+              <th scope="col">Kode</th>
+              <th scope="col">Nama</th>
+              <th scope="col">Satuan</th>
+              <th scope="col">Harga</th>
             </tr>
           </thead>
           <tbody>

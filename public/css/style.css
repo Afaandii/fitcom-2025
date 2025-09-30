@@ -77,7 +77,7 @@
     display: block;
     }
 
-    .navbar-brand {
+    .navbar-brands {
     display: none !important;
     }
 
@@ -143,7 +143,7 @@
     display: block;
     }
 
-    .navbar-brand {
+    .navbar-brands {
     display: none !important;
     }
 
@@ -1099,7 +1099,6 @@
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
 }
 
 .table {
@@ -1335,5 +1334,79 @@
     background-color: #d35400 !important;
     border-color: #d35400 !important;
     color: white !important;
+}
+
+/* Mobile view form create */
+    @media (max-width: 576px) {
+    .form-container {
+        padding: 1rem !important;
+        max-width: 100% !important;
+    }
+
+    .input-group-custom {
+        flex-direction: column; 
+        align-items: stretch !important;
+    }
+
+    .form-label {
+        border-radius: 4px 4px 0 0 !important;
+        width: 100% !important;
+        text-align: left !important;
+        margin-bottom: 4px !important;
+    }
+
+    .form-input {
+        border-radius: 0 0 4px 4px !important;
+        border-left: 1px solid #000 !important; 
+        width: 100% !important;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn-save,
+    .btn-cancel {
+        margin: 0 !important;
+        width: 100% !important; 
+    }
+
+    /* Mobile view untuk form edit */
+    @media (max-width: 576px) {
+    .form-edit-container {
+        padding: 1rem !important;
+        max-width: 100% !important;
+    }
+
+    .form-edit-group {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+
+    .form-edit-label {
+        border-radius: 4px 4px 0 0 !important;
+        width: 100% !important;
+        text-align: left !important;
+        margin-bottom: 4px !important;
+    }
+
+    .form-edit-input {
+        border-radius: 0 0 4px 4px !important;
+        border-left: 1px solid #000 !important;
+        width: 100% !important;
+    }
+
+    .form-edit-buttons {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+
+    .btn-update,
+    .btn-delete,
+    .btn-cancel-edit {
+        width: 100% !important;
+    }
+    }
 }
 /* style product dashboard end */
