@@ -11,7 +11,7 @@ class Home extends Controller
       5 => ["name" => "Cabai Rawit", "price" => "Rp 43.000", "image" => BASEURL . "/img/lombok.png"],
       6 => ["name" => "Timun", "price" => "Rp 7.000", "image" => BASEURL . "/img/timun.png"],
       7 => ["name" => "Sawi", "price" => "Rp 10.000", "image" => BASEURL . "/img/sawi.png"],
-      8 => ["name" => "Worter", "price" => "Rp 5.000", "image" => BASEURL . "/img/wortel.png"],
+      8 => ["name" => "Wortel", "price" => "Rp 5.000", "image" => BASEURL . "/img/wortel.png"],
     ];
 
     $search_query = isset($_GET['search']) ? trim($_GET['search']) : '';
