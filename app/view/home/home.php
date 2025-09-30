@@ -127,7 +127,6 @@
 <script>
   <?php if (isset($products) && !empty($products)): ?>
     window.phpProducts = <?= json_encode($products, JSON_HEX_APOS | JSON_HEX_QUOT) ?>;
-    console.log("PHP Products loaded:", window.phpProducts);
   <?php else: ?>
     window.phpProducts = {};
     console.error("No products data from PHP!");
