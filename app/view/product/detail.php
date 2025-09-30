@@ -137,6 +137,21 @@
           </div>
 
         </div>
+
+        <!-- Lightbox Modal -->
+        <div id="lightboxModal" class="lightbox-modal">
+          <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+          <img class="lightbox-content" id="lightboxImage">
+          <div class="lightbox-caption">
+            <div id="lightboxCaption"></div>
+            <div class="lightbox-counter" id="lightboxCounter"></div>
+          </div>
+
+          <!-- Navigation Arrows -->
+          <a class="lightbox-prev" onclick="changeLightboxImage(-1)">&#10094;</a>
+          <a class="lightbox-next" onclick="changeLightboxImage(1)">&#10095;</a>
+        </div>
+
       </div>
     </div>
   </div>
