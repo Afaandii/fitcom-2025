@@ -80,12 +80,6 @@ function changeMainImage(src, thumbnail) {
     $(thumbnail).addClass("active");
 }
 
-// Variant selection
-function selectVariant(element) {
-    $(element).siblings(".variant-option").removeClass("active");
-    $(element).addClass("active");
-}
-
 // Quantity controls
 function incrementQuantity() {
     let $quantityInput = $("#quantity");
@@ -105,17 +99,6 @@ function decrementQuantity() {
     if (currentValue > minValue) {
         $quantityInput.val(currentValue - 1);
     }
-}
-
-// Action functions
-function addToCart() {
-    let quantity = $("#quantity").val();
-    alert(`${quantity} produk ditambahkan ke keranjang!`);
-}
-
-function buyNow() {
-    let quantity = $("#quantity").val();
-    alert(`Membeli ${quantity} produk sekarang!`);
 }
 
 // Initialize magnifier zoom on page load
@@ -402,8 +385,6 @@ $(document).ready(function() {
 
 
 /* keranjang */
-// Global Cart Functions
-
 // Toggle item selection
 function toggleItemSelection(itemId, shopId) {
     const checkbox = document.getElementById(`item-${itemId}`);
@@ -529,36 +510,6 @@ function removeItem(itemId) {
     showToast('Produk dihapus dari keranjang');
 }
 
-// Add to cart from recommendation
-function addToCartFromRecommendation(productId) {
-    showToast('Produk ditambahkan ke keranjang');
-    
-    // In real app, this would make an AJAX call
-    // For demo, just show success message
-    setTimeout(() => {
-        if (confirm('Produk berhasil ditambahkan ke keranjang. Lihat keranjang?')) {
-            location.reload();
-        }
-    }, 1000);
-}
-
-// Checkout
-function checkout() {
-    const selectedItems = getSelectedItems();
-    if (selectedItems.length === 0) {
-        showToast('Pilih minimal 1 produk untuk checkout', 'warning');
-        return;
-    }
-    
-    // In real app, redirect to checkout page
-    showToast(`Checkout ${selectedItems.length} produk`, 'success');
-    
-    // Simulate checkout process
-    setTimeout(() => {
-        alert('Redirect ke halaman checkout...');
-    }, 1500);
-}
-
 // Helper Functions
 function updateItemSelection(itemId, shopId, isSelected) {
     const item = findCartItem(itemId);
@@ -599,7 +550,7 @@ function updateCartSummary() {
         });
     });
     
-    const finalPrice = totalPrice + 15000; // Plus shipping
+    const finalPrice = totalPrice;
     
     // Update UI
     document.getElementById('totalItems').textContent = totalItems;
@@ -720,60 +671,6 @@ function updateSelectAllCheckbox() {
     }
 }
 
-// Edit mode functionality
-let editMode = false;
-document.getElementById('editCartBtn').addEventListener('click', function() {
-    editMode = !editMode;
-    toggleEditMode(editMode);
-});
-
-function toggleEditMode(isEdit) {
-    const editBtn = document.getElementById('editCartBtn');
-    const deleteButtons = document.querySelectorAll('.delete-btn');
-    
-    if (isEdit) {
-        editBtn.innerHTML = '<i class="fas fa-check"></i>';
-        deleteButtons.forEach(btn => btn.style.display = 'block');
-        showToast('Mode edit aktif');
-    } else {
-        editBtn.innerHTML = '<i class="fas fa-edit"></i>';
-        deleteButtons.forEach(btn => btn.style.display = 'none');
-        showToast('Mode edit nonaktif');
-    }
-}
-
-// Initialize edit mode (hide delete buttons initially)
-document.addEventListener('DOMContentLoaded', function() {
-    const deleteButtons = document.querySelectorAll('.delete-btn');
-    deleteButtons.forEach(btn => btn.style.display = 'none');
-});
-
-// Add keyboard shortcuts
-document.addEventListener('keydown', function(e) {
-    if (e.ctrlKey && e.key === 'a') {
-        e.preventDefault();
-        const selectAllCheckbox = document.getElementById('selectAll');
-        if (selectAllCheckbox) {
-            selectAllCheckbox.click();
-        }
-    }
-    
-    if (e.key === 'Delete' && editMode) {
-        const selectedItems = getSelectedItems();
-        if (selectedItems.length > 0 && confirm(`Hapus ${selectedItems.length} produk yang dipilih?`)) {
-            selectedItems.forEach(item => removeItem(item.id));
-        }
-    }
-});
-
-// Smooth scroll to top when back button is clicked
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-}
-
 // Handle quantity input validation
 document.addEventListener('input', function(e) {
     if (e.target.classList.contains('quantity-input')) {
@@ -808,35 +705,4 @@ if ('IntersectionObserver' in window) {
     });
 }
 
-// Handle offline/online status
-window.addEventListener('online', () => {
-    showToast('Koneksi internet tersambung kembali', 'success');
-});
-
-window.addEventListener('offline', () => {
-    showToast('Tidak ada koneksi internet', 'warning');
-});
-
-// Performance optimization: Debounce quantity updates
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-// Debounced quantity update for better performance
-const debouncedQuantityUpdate = debounce(updateCartSummary, 300);
-
-// Override original updateQuantity to use debounced version
-const originalUpdateQuantity = updateQuantity;
-updateQuantity = function(itemId, change) {
-    originalUpdateQuantity(itemId, change);
-    debouncedQuantityUpdate();
-};
 // keranjang end

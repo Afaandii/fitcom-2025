@@ -118,8 +118,7 @@ class Cart extends Controller
       'total_items' => $totalItems,
       'total_price' => $totalPrice,
       'total_discount' => $totalDiscount,
-      'shipping' => 15000,
-      'final_price' => $totalPrice + 15000
+      'final_price' => $totalPrice
     ];
   }
 }

@@ -84,7 +84,7 @@
                                         Rp <?= htmlspecialchars($product['price']) ?>
                                     </span>
                                 </div>
-                                <button class="btn btn-primary btn-sm mt-3" onclick="addToCartFromRecommendation(<?= $product['id'] ?>)">
+                                <button class="btn btn-primary btn-sm mt-3" (<?= $product['id'] ?>)">
                                     <i class="fas fa-cart-plus me-1"></i>Tambah ke Keranjang
                                 </button>
                             </div>
