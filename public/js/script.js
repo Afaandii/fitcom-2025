@@ -101,6 +101,103 @@ function decrementQuantity() {
     }
 }
 
+let currentImageIndex = 0;
+let productImages = [];
+
+// Initialize product images array
+function initLightbox() {
+    // Ambil semua gambar dari thumbnail
+    const thumbnails = document.querySelectorAll('.thumbnail-image');
+    productImages = Array.from(thumbnails).map(thumb => thumb.src);
+}
+
+// Open lightbox saat main image diklik
+function openLightbox(imageSrc) {
+    const modal = document.getElementById('lightboxModal');
+    const modalImg = document.getElementById('lightboxImage');
+    const caption = document.getElementById('lightboxCaption');
+    const counter = document.getElementById('lightboxCounter');
+    
+    modal.style.display = 'block';
+    modalImg.src = imageSrc;
+    caption.innerHTML = 'Klik panah atau gunakan keyboard untuk navigasi';
+    
+    // Set current index
+    currentImageIndex = productImages.indexOf(imageSrc);
+    
+    // Update counter
+    updateCounter();
+    
+    // Disable body scroll
+    document.body.style.overflow = 'hidden';
+}
+
+// Update counter display
+function updateCounter() {
+    const counter = document.getElementById('lightboxCounter');
+    counter.innerHTML = `${currentImageIndex + 1} / ${productImages.length}`;
+}
+
+// Close lightbox
+function closeLightbox() {
+    const modal = document.getElementById('lightboxModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+// Change image in lightbox
+function changeLightboxImage(direction) {
+    currentImageIndex += direction;
+    
+    // Loop around
+    if (currentImageIndex >= productImages.length) {
+        currentImageIndex = 0;
+    }
+    if (currentImageIndex < 0) {
+        currentImageIndex = productImages.length - 1;
+    }
+    
+    const modalImg = document.getElementById('lightboxImage');
+    modalImg.src = productImages[currentImageIndex];
+    
+    // Update counter
+    updateCounter();
+}
+
+// Close on click outside image
+document.addEventListener('DOMContentLoaded', function() {
+    initLightbox();
+    
+    // Add click event to main image
+    const mainImage = document.getElementById('mainImage');
+    if (mainImage) {
+        mainImage.addEventListener('click', function() {
+            openLightbox(this.src);
+        });
+    }
+    
+    // Close on click outside
+    const modal = document.getElementById('lightboxModal');
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            closeLightbox();
+        }
+    });
+    
+    // Close on ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeLightbox();
+        }
+        if (e.key === 'ArrowLeft') {
+            changeLightboxImage(-1);
+        }
+        if (e.key === 'ArrowRight') {
+            changeLightboxImage(1);
+        }
+    });
+});
+
 // Initialize magnifier zoom on page load
 $(function () {
     initializeMagnifierZoom();
