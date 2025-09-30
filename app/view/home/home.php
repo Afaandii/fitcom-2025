@@ -48,16 +48,46 @@
   <div class="container-fluid bg-light rounded-2 mt-3">
     <div class="card-container">
       <div class="card-scroll justify-content-lg-center gap-lg-4">
-        <?php for ($i = 1; $i <= 10; $i++): ?>
-          <div class="card-kategori">
+          <div class="card-kategori col-3">
             <a href="#">
               <div class="container-icon">
-                <img src="img/AmoerFarm Logo.png" alt="logo" class="kategori-img-logo">
+                <img src="img/gubis.jpg" alt="logo" class="kategori-img-logo">
               </div>
-              <h6 class="mt-2">Dummy</h6>
+              <h6 class="mt-2">Sayur</h6>
             </a>
           </div>
-        <?php endfor; ?>
+          <div class="card-kategori col-3">
+            <a href="#">
+              <div class="container-icon">
+                <img src="img/gomu.jpeg" alt="logo" class="kategori-img-logo">
+              </div>
+              <h6 class="mt-2">Buah</h6>
+            </a>
+          </div>
+          <div class="card-kategori col-3">
+            <a href="#">
+              <div class="container-icon">
+                <img src="img/biji.jpg" alt="logo" class="kategori-img-logo">
+              </div>
+              <h6 class="mt-2">Biji-bijian</h6>
+            </a>
+          </div>
+          <div class="card-kategori col-3">
+            <a href="#">
+              <div class="container-icon">
+                <img src="img/ubi.jpg" alt="logo" class="kategori-img-logo">
+              </div>
+              <h6 class="mt-2">Ubi-ubian</h6>
+            </a>
+          </div>
+          <div class="card-kategori col-3">
+            <a href="#">
+              <div class="container-icon">
+                <img src="img/pacul.png" alt="logo" class="kategori-img-logo">
+              </div>
+              <h6 class="mt-2">Peralatan</h6>
+            </a>
+          </div>
       </div>
     </div>
   </div>
@@ -71,9 +101,9 @@
           <div class="col-6 col-lg-3">
             <a href="<?= BASEURL ?>/product/detail/<?= $id ?>" class="text-decoration-none">
               <div class="card text-center w-100 shadow-sm rounded-3">
-                <div class="p-3">
+                <div class="p-3 ">
                   <img src="<?= htmlspecialchars($product['image']); ?>" alt="<?= htmlspecialchars($product['name']); ?>"
-                    class="img-fluid rounded-3">
+                    class="img-fluid h-100 object-fit-cover rounded-3">
                 </div>
                 <div class="card-body bg-light">
                   <h2 class="h4 fw-bold text-dark"><?= htmlspecialchars($product['name']); ?></h2>
