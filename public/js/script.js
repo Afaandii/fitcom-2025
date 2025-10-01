@@ -437,7 +437,11 @@ $(document).ready(function() {
   }
   
   // SETUP FORM SUBMIT UNTUK SEMUA HALAMAN (redirect ke home)
-  $('form[role="search"], form').on('submit', function(e) {
+$('form[role="search"]').on('submit', function(e) {
+    // Jangan tangkap form dashboard
+    if ($(this).attr('role') === 'keyword') {
+        return;
+    }
     e.preventDefault();
     
     const query = $(this).find('input[type="search"], input[placeholder*="Cari"]').val();
@@ -803,3 +807,85 @@ if ('IntersectionObserver' in window) {
 }
 
 // keranjang end
+
+// Search function khusus untuk dashboard admin
+$(document).ready(function() {
+    // Cek apakah sedang di halaman dashboard product
+    const isDashboardProductPage = $('.table-container').length > 0 && 
+                                   $('table thead th:contains("Action")').length > 0;
+    
+    if (isDashboardProductPage) {
+        // Search handler khusus untuk dashboard
+        $('form[role="keyword"] input[type="search"]').on('input', function(e) {
+            e.stopPropagation(); // Stop event bubbling
+            
+            const searchQuery = $(this).val().toLowerCase().trim();
+            const $tableRows = $('table tbody tr');
+            
+            if (searchQuery === '') {
+                // Tampilkan semua baris jika search kosong
+                $tableRows.show();
+                return;
+            }
+            
+            // Filter baris berdasarkan query
+            $tableRows.each(function() {
+                const $row = $(this);
+                const productCode = $row.find('.product-code').text().toLowerCase();
+                const productName = $row.find('td:nth-child(4)').text().toLowerCase();
+                const productUnit = $row.find('.unit-text').text().toLowerCase();
+                const productPrice = $row.find('.price-text').text().toLowerCase();
+                
+                // Cek apakah ada yang cocok
+                const isMatch = productCode.includes(searchQuery) ||
+                               productName.includes(searchQuery) ||
+                               productUnit.includes(searchQuery) ||
+                               productPrice.includes(searchQuery);
+                
+                // Tampilkan atau sembunyikan baris
+                if (isMatch) {
+                    $row.show();
+                } else {
+                    $row.hide();
+                }
+            });
+            
+            // Tampilkan pesan jika tidak ada hasil
+            const visibleRows = $tableRows.filter(':visible').length;
+            
+            // Hapus pesan "tidak ditemukan" yang sudah ada
+            $('.no-results-message').remove();
+            
+            if (visibleRows === 0) {
+                $('table tbody').append(`
+                    <tr class="no-results-message">
+                        <td colspan="6" class="text-center py-4">
+                            <div class="alert alert-info mb-0">
+                                <i class="fas fa-search mb-2" style="font-size: 2rem; opacity: 0.5;"></i>
+                                <h6>Produk tidak ditemukan</h6>
+                                <p class="mb-0 small">Coba gunakan kata kunci yang berbeda</p>
+                            </div>
+                        </td>
+                    </tr>
+                `);
+            }
+        });
+        
+        // Prevent form submission untuk dashboard
+        $('form[role="keyword"]').on('submit', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        });
+        
+        // Clear search dengan ESC key
+        $(document).on('keyup', 'form[role="keyword"] input[type="search"]', function(e) {
+            if (e.keyCode === 27) { // ESC key
+                $(this).val('');
+                $('table tbody tr').show();
+                $('.no-results-message').remove();
+            }
+        });
+    }
+});
+//search dashboard admin end
