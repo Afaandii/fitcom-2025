@@ -1196,7 +1196,7 @@
     padding: 10px 16px;
     border-radius: 8px;
     font-weight: 500;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .btn-tambah:hover {
@@ -1248,6 +1248,23 @@
 .btn-edit:hover {
     background-color: #1e3d6f;
     color: white;
+}
+
+/* responsive mobile table */
+@media (max-width: 576px) {
+    .btn-tambah{
+        background-color: #2c5aa0;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 500;
+        /* margin-bottom: 20px; */
+    }
+
+    .container-prodash{
+        min-width: 440px !important;
+    }
 }
 
 /* style create form */

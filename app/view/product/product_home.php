@@ -1,10 +1,20 @@
 <div id="layoutSidenav_content">
   <main>
     <div class="container-fluid px-4 mt-5">
-      <a href="<?= BASEURL ?>/product/create" class="btn btn-tambah">
-        <i class="fas fa-plus me-2"></i>Tambah
-      </a>
       <div class="table-container table-responsive">
+        <div class="container-prodash d-flex justify-content-evenly mx-2 my-2 align-items-center">
+          <a href="<?= BASEURL ?>/product/create" class="btn btn-tambah me-lg-0 me-3">
+            <i class="fas fa-plus me-2"></i>Tambah
+          </a>
+          <form class="flex-grow-1 mx-lg-2 my-3 my-lg-2" role="keyword">
+            <div class="input-group">
+              <span class="input-group-text bg-white border-end-0">
+                <i class="fas fa-search text-secondary"></i>
+              </span>
+              <input type="search" class="form-control border-start-0" placeholder="Cari Item...">
+            </div>
+          </form>
+        </div>
         <table class="table table-striped table-hover">
           <thead>
             <tr>
